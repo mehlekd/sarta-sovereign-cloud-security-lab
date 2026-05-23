@@ -1,0 +1,8 @@
+{
+  "detections": [
+    {
+      "name": "Excessive IAM Privilege Escalation",
+      "severity": "high"
+    }
+  ]
+}
