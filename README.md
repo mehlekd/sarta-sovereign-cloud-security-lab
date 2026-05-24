@@ -1,76 +1,101 @@
-# SARTA – Sovereign Adaptive Resilience & Trust Architecture Lab
+SARTA – Sovereign Adaptive Resilience & Trust Architecture Lab:
+SARTA is a sovereign cloud security architecture and operational resilience lab designed to demonstrate modern Zero Trust, Kubernetes security, AI governance, and policy-as-code controls aligned with emerging EU regulatory and operational resilience requirements.
+The project integrates cloud-native security engineering, identity-centric governance, detection engineering, and resilience-by-design principles across multi-cloud and Kubernetes environments.
+SARTA is aligned with:
+•	DORA (Digital Operational Resilience Act)
+•	NIS2 Directive
+•	GDPR
+•	ISO 27001
+•	EU AI Act
+•	NIST SP 800-207 (Zero Trust)
+________________________________________
+Architecture Principles
+Zero Trust by Design
+Identity-centric security architecture enforcing least privilege, continuous verification, and segmented trust boundaries.
+Sovereign Cloud Governance
+Support for regional deployment restrictions, data residency enforcement, encryption governance, and sovereign operational controls.
+Resilience-by-Design
+Operational resilience engineering patterns aligned with DORA requirements for high-availability and regulated workloads.
+Policy-as-Code Governance
+Continuous enforcement of Kubernetes and cloud security controls using OPA/Gatekeeper and automated CI/CD validation.
+Secure AI Adoption
+AI governance controls that support prompt injection mitigation, auditability, secure interaction logging, and AI workload segmentation.
+________________________________________
+Repository Structure
+/architecture -> Architecture diagrams and reference models
+/docs -> Architecture documentation and governance references
+/scenarios -> Threat models and attack scenarios
+/compliance-mapping -> Regulatory control alignment documentation
+/terraform -> Sovereign cloud landing zone infrastructure
+/kubernetes -> Kubernetes security controls and policies
+/opa-policies -> Policy-as-code governance controls
+/detection-engineering -> Detection logic and monitoring rules
+/cicd -> Secure CI/CD pipeline examples
+/ai-security -> AI governance and workload protection controls
+/resilience -> Operational resilience engineering patterns
+________________________________________
+Security Domains
+Identity & Access Governance
+•	Least privilege IAM
+•	RBAC enforcement
+•	Conditional access
+•	Federated identity governance
+•	Workload identity architecture
+Kubernetes Security
+•	Pod Security Standards
+•	Runtime security controls
+•	Network policy segmentation
+•	Admission control enforcement
+•	Supply chain protection
+Cloud Security
+•	Encryption-by-default
+•	Sovereign region restrictions
+•	Cloud-native segmentation
+•	Infrastructure-as-Code governance
+AI Security Governance
+•	Prompt injection mitigation
+•	AI interaction logging
+•	Secure AI workload segmentation
+•	Input filtering and validation
+Detection Engineering
+•	Cloud-native telemetry
+•	SIEM integration
+•	Threat detection logic
+•	MITRE ATT&CK aligned detections
+________________________________________
+Threat Scenarios
+•	Kubernetes privilege escalation
+•	CI/CD pipeline compromise
+•	Identity federation abuse
+•	Cloud lateral movement
+•	Prompt injection attacks
+•	Cross-region sovereignty violations
+________________________________________
+Compliance Alignment
+DORA
+Operational resilience engineering, telemetry visibility, governance automation, and incident response alignment.
+NIS2
+Security governance, risk management, incident handling, and cloud operational controls.
+GDPR
+Regional data residency, encryption governance, and identity-centric access controls.
+EU AI Act
+AI governance, AI interaction monitoring, and secure AI workload management.
+________________________________________
+Future Enhancements
+•	Multi-cloud sovereign landing zones
+•	SPIFFE/SPIRE workload identity integration
+•	Advanced Kubernetes runtime detection
+•	Secure AI model governance controls
+•	Resilience simulation exercises
+•	Compliance-as-code automation
+________________________________________
+Author
+Designed and maintained as a Cloud Security Architecture portfolio focused on:
+•	Sovereign Cloud Security
+•	Zero Trust Architecture
+•	Kubernetes Security
+•	AI Governance
+•	Operational Resilience Engineering
+•	Policy-as-Code Governance
 
-## Overview
-
-This project demonstrates a sovereign Zero Trust cloud security architecture aligned with EU regulatory frameworks including:
-
-- DORA (Digital Operational Resilience Act)
-- NIS2 Directive
-- GDPR
-- ISO 27001
-- EU AI Act (AI Governance Alignment)
-
-The architecture integrates:
-- Zero Trust Security (NIST 800-207)
-- IAM / PAM Governance
-- Kubernetes Security Controls
-- Policy-as-Code Enforcement
-- AI Security Controls
-- Cloud Resilience Engineering
-
----
-
-## Architecture Goals
-
-- Identity-first security model
-- Policy-as-code enforcement across cloud & Kubernetes
-- Continuous compliance validation
-- Sovereign cloud controls (EU region constraints)
-- AI workload security governance
-- Resilience-by-design architecture (DORA aligned)
-
----
-
-## Key Security Controls
-
-### Identity & Access
-- Least privilege IAM policies
-- Role-based access control (RBAC)
-- Conditional access enforcement
-
-### Cloud Security
-- Encrypted storage by default
-- Region restriction (EU-only deployment option)
-- Secure cloud networking segmentation
-
-### Kubernetes Security
-- Pod Security Standards enforced
-- Network policies deny-by-default
-- RBAC least privilege model
-
-### Supply Chain Security
-- CI/CD scanning pipeline
-- Artifact integrity validation
-- Policy enforcement in deployment pipeline
-
-### AI Security
-- Prompt injection detection layer
-- Input filtering controls
-- AI interaction logging
-
----
-
-## How to Use
-
-1. Deploy Terraform landing zone
-2. Apply Kubernetes security policies
-3. Enforce OPA policies in CI/CD pipeline
-4. Run AI security simulation scripts
-5. Review detection engineering rules
-
----
-
-## Author
-
-Cloud Security Architect Portfolio Project
 
