@@ -98,4 +98,66 @@ Designed and maintained as a Cloud Security Architecture portfolio focused on:
 •	Operational Resilience Engineering
 •	Policy-as-Code Governance
 
+ARCHITECTURE DIAGRAMS (MERMAID)
+Zero Trust Architecture
+```mermaid
+flowchart LR
+
+User --> IAM[Identity Provider]
+IAM --> MFA[MFA Verification]
+MFA --> Access[Policy Decision Point]
+
+Access --> AWS[AWS Workloads]
+Access --> Azure[Azure Workloads]
+Access --> GCP[GCP Workloads]
+Access --> K8s[Kubernetes Cluster]
+
+K8s --> OPA[OPA/Gatekeeper]
+K8s --> Falco[Runtime Security]
+
+AWS --> SIEM[SIEM/XDR]
+Azure --> SIEM
+GCP --> SIEM
+Falco --> SIEM
+
+SIEM --> SOC[Security Operations]
+```
+________________________________________
+Secure CI/CD Pipeline
+```mermaid
+flowchart LR
+
+Dev[Developer] --> GitHub[GitHub Repo]
+
+GitHub --> SAST[SAST Scan]
+SAST --> IaC[IaC Security Scan]
+IaC --> OPA[OPA Policy Validation]
+OPA --> Build[Artifact Build]
+
+Build --> Sign[Artifact Signing]
+Sign --> Registry[Container Registry]
+
+Registry --> K8s[Kubernetes Deployment]
+
+K8s --> Runtime[Runtime Security]
+Runtime --> SIEM[SIEM Monitoring]
+```
+________________________________________
+AI Security Governance Flow
+```mermaid
+flowchart LR
+
+User --> Input[Input Validation]
+
+Input --> Filter[Prompt Injection Detection]
+
+Filter --> AI[LLM / AI Service]
+
+AI --> Logging[AI Interaction Logging]
+
+Logging --> SIEM[SIEM Monitoring]
+
+SIEM --> SOC[Security Operations]
+```
+________________________________________
 
