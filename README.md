@@ -98,7 +98,8 @@ Designed and maintained as a Cloud Security Architecture portfolio focused on:
 •	Operational Resilience Engineering
 •	Policy-as-Code Governance
 
-ARCHITECTURE DIAGRAMS (MERMAID)
+ARCHITECTURE DIAGRAMS:
+
 Zero Trust Architecture
 ```mermaid
 flowchart LR
