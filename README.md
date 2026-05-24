@@ -81,22 +81,6 @@ Regional data residency, encryption governance, and identity-centric access cont
 EU AI Act
 AI governance, AI interaction monitoring, and secure AI workload management.
 ________________________________________
-Future Enhancements
-•	Multi-cloud sovereign landing zones
-•	SPIFFE/SPIRE workload identity integration
-•	Advanced Kubernetes runtime detection
-•	Secure AI model governance controls
-•	Resilience simulation exercises
-•	Compliance-as-code automation
-________________________________________
-Author
-Designed and maintained as a Cloud Security Architecture portfolio focused on:
-•	Sovereign Cloud Security
-•	Zero Trust Architecture
-•	Kubernetes Security
-•	AI Governance
-•	Operational Resilience Engineering
-•	Policy-as-Code Governance
 
 ARCHITECTURE DIAGRAMS:
 
@@ -161,4 +145,94 @@ Logging --> SIEM[SIEM Monitoring]
 SIEM --> SOC[Security Operations]
 ```
 ________________________________________
+
+THREAT SCENARIOS
+/scenarios/prompt-injection.md
+Threat Scenario: AI Prompt Injection
+Scenario Overview
+An attacker attempts to manipulate an enterprise AI assistant using crafted prompts designed to bypass governance controls and expose sensitive information.
+________________________________________
+Attack Path
+1.	User submits malicious prompt input
+2.	AI model receives instruction override attempt
+3.	Prompt attempts data extraction or policy bypass
+4.	Sensitive enterprise information exposure risk introduced
+________________________________________
+Security Risks
+•	Sensitive data leakage
+•	Policy circumvention
+•	AI governance failure
+•	Unauthorized information disclosure
+________________________________________
+Mitigation Controls
+•	Prompt filtering and validation
+•	Input sanitization
+•	AI interaction logging
+•	Output filtering
+•	Role-based AI access controls
+•	Human review workflows
+________________________________________
+Detection Strategy
+•	Monitor abnormal prompt behavior
+•	Detect prompt override keywords
+•	Log high-risk interaction attempts
+•	Alert on repeated policy bypass attempts
+________________________________________
+Compliance Alignment
+•	EU AI Act
+•	GDPR
+•	DORA operational resilience
+/scenarios/k8s-privilege-escalation.md
+Threat Scenario: Kubernetes Privilege Escalation
+Scenario Overview
+An attacker exploits excessive RBAC permissions within a Kubernetes environment to gain elevated cluster privileges.
+________________________________________
+Attack Path
+1.	Compromised workload or credential
+2.	Excessive RBAC permissions abused
+3.	Cluster-wide administrative access obtained
+4.	Lateral movement across workloads
+________________________________________
+Security Risks
+•	Cluster compromise
+•	Workload manipulation
+•	Data exposure
+•	Service disruption
+________________________________________
+Mitigation Controls
+•	Least privilege RBAC
+•	Admission control policies
+•	Runtime security monitoring
+•	Namespace segmentation
+•	Network policy enforcement
+•	Service account restrictions
+________________________________________
+Detection Strategy
+•	Monitor privileged container creation
+•	Detect RBAC modifications
+•	Alert on unauthorized kubectl activity
+•	Monitor abnormal service account usage
+________________________________________
+Compliance Alignment
+•	DORA
+•	NIS2
+•	CIS Kubernetes Benchmark
+_________________________________________
+Future Enhancements:
+•	Multi-cloud sovereign landing zones
+•	SPIFFE/SPIRE workload identity integration
+•	Advanced Kubernetes runtime detection
+•	Secure AI model governance controls
+•	Resilience simulation exercises
+•	Compliance-as-code automation
+________________________________________
+Author
+Designed and maintained as a Cloud Security Architecture portfolio focused on:
+•	Sovereign Cloud Security
+•	Zero Trust Architecture
+•	Kubernetes Security
+•	AI Governance
+•	Operational Resilience Engineering
+•	Policy-as-Code Governance
+•	Zero Trust Architecture
 
