@@ -28,10 +28,6 @@ Enterprise-focused sovereign cloud and operational resilience architecture proje
 
 ## Technologies
 AWS • Azure • GCP • Kubernetes • Terraform • OPA • Falco • Splunk • Sentinel
-
-## Certifications
-CISSP • CCSP • CRISC • CDPSE • PMP
-
 ______________________________________________________________
 
 SARTA – Sovereign Adaptive Resilience & Trust Architecture Lab:
