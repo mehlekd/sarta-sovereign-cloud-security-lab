@@ -1,3 +1,34 @@
+# Mr. Mehlek Dawveed
+
+Principal Cloud Security & Sovereign Resilience Architect
+
+Specializing in:
+- Sovereign Cloud Security
+- Zero Trust Architecture
+- Kubernetes Security
+- AI Governance
+- Operational Resilience
+- Policy-as-Code
+- Detection Engineering
+
+## Featured Projects
+
+### SARTA – Sovereign Adaptive Resilience & Trust Architecture Lab
+Enterprise-focused sovereign cloud and operational resilience architecture project aligned with:
+- DORA
+- NIS2
+- GDPR
+- ISO 27001
+- EU AI Act
+
+## Technologies
+AWS • Azure • GCP • Kubernetes • Terraform • OPA • Falco • Splunk • Sentinel
+
+## Certifications
+CISSP • CCSP • CRISC • CDPSE • PMP
+
+______________________________________________________________
+
 SARTA – Sovereign Adaptive Resilience & Trust Architecture Lab:
 SARTA is a sovereign cloud security architecture and operational resilience lab designed to demonstrate modern Zero Trust, Kubernetes security, AI governance, and policy-as-code controls aligned with emerging EU regulatory and operational resilience requirements.
 The project integrates cloud-native security engineering, identity-centric governance, detection engineering, and resilience-by-design principles across multi-cloud and Kubernetes environments.
