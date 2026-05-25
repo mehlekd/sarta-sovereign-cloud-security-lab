@@ -3,14 +3,18 @@
 Principal Cloud Security & Sovereign Resilience Architect
 
 Specializing in:
-- Sovereign Cloud Security
-- Zero Trust Architecture
-- Kubernetes Security
-- AI Governance
-- Policy-as-Code
-- Detection Engineering
-- Operational resilience for regulated multi-cloud environments (AWS, Azure, GCP)
-- aligned with DORA, NIS2, GDPR, and ISO 27001.
+- Sovereign Cloud Security Architecture
+- Zero Trust Enterprise Architecture
+- Kubernetes & Cloud-Native Security
+- AI Security Governance
+- IAM / PAM / Identity Federation
+- Detection Engineering & SIEM Modernization
+- DORA / NIS2 / GDPR Alignment
+- Operational Resilience Engineering
+- Policy-as-Code Governance
+- Multi-Cloud Security Strategy (AWS / MS AZURE / GCP)
+- Supply Chain Security (SLSA / SBOM / Sigstore)
+- Secure AI Workload Governance
 
 ## Featured Projects
 
