@@ -7,9 +7,10 @@ Specializing in:
 - Zero Trust Architecture
 - Kubernetes Security
 - AI Governance
-- Operational Resilience
 - Policy-as-Code
 - Detection Engineering
+- Operational resilience for regulated multi-cloud environments (AWS, Azure, GCP)
+- aligned with DORA, NIS2, GDPR, and ISO 27001.
 
 ## Featured Projects
 
