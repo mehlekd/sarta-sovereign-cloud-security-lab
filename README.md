@@ -102,7 +102,7 @@ ________________________________________
 #### THREAT SCENARIOS
 /scenarios/k8s-privilege-escalation.md
 ##### Threat Scenario: Kubernetes Privilege Escalation
-Scenario Overview
+##### Scenario Overview
 An attacker exploits excessive RBAC permissions within a Kubernetes environment to gain elevated cluster privileges.
 ________________________________________
 #### Attack Path
@@ -136,31 +136,27 @@ ________________________________________
 - NIS2
 - CIS Kubernetes Benchmark
 _________________________________________
-
-### Secure CI/CD Pipeline
+### AI Security Governance Flow
 ```mermaid
 flowchart LR
 
-Dev[Developer] --> GitHub[GitHub Repo]
+User --> Input[Input Validation]
 
-GitHub --> SAST[SAST Scan]
-SAST --> IaC[IaC Security Scan]
-IaC --> OPA[OPA Policy Validation]
-OPA --> Build[Artifact Build]
+Input --> Filter[Prompt Injection Detection]
 
-Build --> Sign[Artifact Signing]
-Sign --> Registry[Container Registry]
+Filter --> AI[LLM / AI Service]
 
-Registry --> K8s[Kubernetes Deployment]
+AI --> Logging[AI Interaction Logging]
 
-K8s --> Runtime[Runtime Security]
-Runtime --> SIEM[SIEM Monitoring]
+Logging --> SIEM[SIEM Monitoring]
+
+SIEM --> SOC[Security Operations]
 ```
 ________________________________________
 #### THREAT SCENARIOS
 /scenarios/prompt-injection.md
 ##### Threat Scenario: AI Prompt Injection
-Scenario Overview
+##### Scenario Overview
 An attacker attempts to manipulate an enterprise AI assistant using crafted prompts designed to bypass governance controls and expose sensitive information.
 ________________________________________
 #### Attack Path
@@ -193,23 +189,25 @@ ________________________________________
 - EU AI Act
 - GDPR
 - DORA operational resilience
-_________________________________________
-
-### AI Security Governance Flow
+________________________________________
+### Secure CI/CD Pipeline
 ```mermaid
 flowchart LR
 
-User --> Input[Input Validation]
+Dev[Developer] --> GitHub[GitHub Repo]
 
-Input --> Filter[Prompt Injection Detection]
+GitHub --> SAST[SAST Scan]
+SAST --> IaC[IaC Security Scan]
+IaC --> OPA[OPA Policy Validation]
+OPA --> Build[Artifact Build]
 
-Filter --> AI[LLM / AI Service]
+Build --> Sign[Artifact Signing]
+Sign --> Registry[Container Registry]
 
-AI --> Logging[AI Interaction Logging]
+Registry --> K8s[Kubernetes Deployment]
 
-Logging --> SIEM[SIEM Monitoring]
-
-SIEM --> SOC[Security Operations]
+K8s --> Runtime[Runtime Security]
+Runtime --> SIEM[SIEM Monitoring]
 ```
 ________________________________________
 
