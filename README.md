@@ -233,6 +233,14 @@ Regional data residency, encryption governance, and identity-centric access cont
 #### EU AI Act
 AI governance, AI interaction monitoring, and secure AI workload management.
 _________________________________________
+### Research Outputs
+- Architecture reference models
+- Threat modeling scenarios
+- Policy-as-code implementations
+- Security control mappings
+- Cloud resilience engineering patterns
+- AI governance frameworks
+_________________________________________
 ### Future Enhancements:
 - Multi-Cloud Sovereign Landing Zones
 - SPIFFE/SPIRE Workload Identity Integration
@@ -251,6 +259,7 @@ _________________________________________
 - /opa-policies -> Policy-as-code governance controls
 - /resilience -> Operational resilience engineering patterns
 - /terraform -> Sovereign cloud landing zone infrastructure
+- /whitepapers -> operational-zero-trust-dora-nis2.md, sovereign-cloud-architecture.md, ai-governance-enterprise-cloud.md
 ________________________________________
 
 
