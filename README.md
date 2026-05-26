@@ -30,6 +30,138 @@ Our lab is based on Zero Trust Architecture, Kubernetes security, AI governance,
 - Detection Engineering & SIEM Modernization
 - Multi-Cloud Security Strategy (AWS / MS AZURE / GCP)
 - Supply Chain Security (SLSA / SBOM / Sigstore)
+_________________________________________
+
+## UNIFIED SOVEREIGN AI SECURITY ARCHITECTURE (CLOUD-NATIVE REFERENCE MODEL)
+
+```mermaid
+flowchart TB
+
+%% =====================================================
+%% 1. ACCESS LAYER
+%% =====================================================
+
+subgraph L1["1. Access Layer"]
+
+USER["Users / Applications / APIs / Agents"]
+
+end
+
+USER --> EDGE["Secure AI Edge Gateway"]
+
+%% =====================================================
+%% 2. IDENTITY + ZERO TRUST CONTROL PLANE
+%% =====================================================
+
+subgraph L2["2. Identity + Zero Trust Control Plane"]
+
+EDGE --> IDP["Identity Provider (IAM / SSO / MFA)"]
+
+IDP --> PDP["Policy Decision Engine (Zero Trust)"]
+
+PDP --> PEP["Policy Enforcement Layer (API Gateway / Mesh)"]
+
+end
+
+PEP --> AI_GW["AI Security Gateway"]
+
+%% =====================================================
+%% 3. AI EXECUTION LAYER
+%% =====================================================
+
+subgraph L3["3. AI Execution Layer"]
+
+AI_GW --> PROMPT["Prompt Filtering & Validation"]
+
+PROMPT --> RISK["Context & Risk Evaluation Engine"]
+
+RISK --> LLM["AI / LLM Execution Environment"]
+
+LLM --> OUTPUT["Model Output Generation"]
+
+OUTPUT --> DLP["Data Loss Prevention / Redaction"]
+
+end
+
+DLP --> USER
+
+%% =====================================================
+%% 4. SECURITY OBSERVABILITY LAYER
+%% =====================================================
+
+subgraph L4["4. Security Observability Layer"]
+
+AI_GW --> LOGS["Unified Logging Layer"]
+
+PDP --> LOGS
+
+LLM --> LOGS
+
+LOGS --> SIEM["Central SIEM Platform"]
+
+SIEM --> DETECTION["Threat Detection & Behavioral Analytics"]
+
+end
+
+%% =====================================================
+%% 5. COMPLIANCE & GOVERNANCE LAYER
+%% =====================================================
+
+subgraph L5["5. Compliance & Governance Layer"]
+
+PDP --> COMPLIANCE["Compliance Mapping Engine"]
+
+COMPLIANCE --> GDPR["GDPR"]
+
+COMPLIANCE --> NIS2["NIS2"]
+
+COMPLIANCE --> ISO["ISO 27001"]
+
+COMPLIANCE --> SOC["SOC 2"]
+
+COMPLIANCE --> HIPAA["HIPAA"]
+
+COMPLIANCE --> SOX["SOX"]
+
+COMPLIANCE --> GLBA["GLBA"]
+
+end
+
+%% =====================================================
+%% 6. MULTI-CLOUD EXECUTION LAYER
+%% =====================================================
+
+subgraph L6["6. Multi-Cloud Execution Layer"]
+
+LLM --> AWS["AWS AI + Compute Services"]
+
+LLM --> AZURE["Microsoft Azure AI + Security Stack"]
+
+LLM --> GCP["Google Cloud AI Platform"]
+
+AWS --> K8S_AWS["Amazon EKS"]
+
+AZURE --> K8S_AZURE["Azure AKS"]
+
+GCP --> K8S_GCP["Google GKE"]
+
+end
+
+%% =====================================================
+%% OPTIONAL STYLING
+%% =====================================================
+
+classDef security fill:#0b3d91,color:#ffffff,stroke:#082567,stroke-width:2px;
+classDef governance fill:#145a32,color:#ffffff,stroke:#0b3d1f,stroke-width:2px;
+classDef cloud fill:#6c3483,color:#ffffff,stroke:#4a235a,stroke-width:2px;
+classDef userlayer fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
+
+class USER,EDGE userlayer;
+class IDP,PDP,PEP,AI_GW,PROMPT,RISK,LLM,OUTPUT,DLP,LOGS,SIEM,DETECTION security;
+class COMPLIANCE,GDPR,NIS2,ISO,SOC,HIPAA,SOX,GLBA governance;
+class AWS,AZURE,GCP,K8S_AWS,K8S_AZURE,K8S_GCP cloud;
+```
+_________________________________________
 
 ### Security Domains:
 #### Identity & Access Governance
@@ -232,137 +364,6 @@ Security governance, risk management, incident handling, and cloud operational c
 Regional data residency, encryption governance, and identity-centric access controls.
 #### EU AI Act
 AI governance, AI interaction monitoring, and secure AI workload management.
-_________________________________________
-
-## UNIFIED SOVEREIGN AI SECURITY ARCHITECTURE (CLOUD-NATIVE REFERENCE MODEL)
-
-```mermaid
-flowchart TB
-
-%% =====================================================
-%% 1. ACCESS LAYER
-%% =====================================================
-
-subgraph L1["1. Access Layer"]
-
-USER["Users / Applications / APIs / Agents"]
-
-end
-
-USER --> EDGE["Secure AI Edge Gateway"]
-
-%% =====================================================
-%% 2. IDENTITY + ZERO TRUST CONTROL PLANE
-%% =====================================================
-
-subgraph L2["2. Identity + Zero Trust Control Plane"]
-
-EDGE --> IDP["Identity Provider (IAM / SSO / MFA)"]
-
-IDP --> PDP["Policy Decision Engine (Zero Trust)"]
-
-PDP --> PEP["Policy Enforcement Layer (API Gateway / Mesh)"]
-
-end
-
-PEP --> AI_GW["AI Security Gateway"]
-
-%% =====================================================
-%% 3. AI EXECUTION LAYER
-%% =====================================================
-
-subgraph L3["3. AI Execution Layer"]
-
-AI_GW --> PROMPT["Prompt Filtering & Validation"]
-
-PROMPT --> RISK["Context & Risk Evaluation Engine"]
-
-RISK --> LLM["AI / LLM Execution Environment"]
-
-LLM --> OUTPUT["Model Output Generation"]
-
-OUTPUT --> DLP["Data Loss Prevention / Redaction"]
-
-end
-
-DLP --> USER
-
-%% =====================================================
-%% 4. SECURITY OBSERVABILITY LAYER
-%% =====================================================
-
-subgraph L4["4. Security Observability Layer"]
-
-AI_GW --> LOGS["Unified Logging Layer"]
-
-PDP --> LOGS
-
-LLM --> LOGS
-
-LOGS --> SIEM["Central SIEM Platform"]
-
-SIEM --> DETECTION["Threat Detection & Behavioral Analytics"]
-
-end
-
-%% =====================================================
-%% 5. COMPLIANCE & GOVERNANCE LAYER
-%% =====================================================
-
-subgraph L5["5. Compliance & Governance Layer"]
-
-PDP --> COMPLIANCE["Compliance Mapping Engine"]
-
-COMPLIANCE --> GDPR["GDPR"]
-
-COMPLIANCE --> NIS2["NIS2"]
-
-COMPLIANCE --> ISO["ISO 27001"]
-
-COMPLIANCE --> SOC["SOC 2"]
-
-COMPLIANCE --> HIPAA["HIPAA"]
-
-COMPLIANCE --> SOX["SOX"]
-
-COMPLIANCE --> GLBA["GLBA"]
-
-end
-
-%% =====================================================
-%% 6. MULTI-CLOUD EXECUTION LAYER
-%% =====================================================
-
-subgraph L6["6. Multi-Cloud Execution Layer"]
-
-LLM --> AWS["AWS AI + Compute Services"]
-
-LLM --> AZURE["Microsoft Azure AI + Security Stack"]
-
-LLM --> GCP["Google Cloud AI Platform"]
-
-AWS --> K8S_AWS["Amazon EKS"]
-
-AZURE --> K8S_AZURE["Azure AKS"]
-
-GCP --> K8S_GCP["Google GKE"]
-
-end
-
-%% =====================================================
-%% OPTIONAL STYLING
-%% =====================================================
-
-classDef security fill:#0b3d91,color:#ffffff,stroke:#082567,stroke-width:2px;
-classDef governance fill:#145a32,color:#ffffff,stroke:#0b3d1f,stroke-width:2px;
-classDef cloud fill:#6c3483,color:#ffffff,stroke:#4a235a,stroke-width:2px;
-classDef userlayer fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
-
-class USER,EDGE userlayer;
-class IDP,PDP,PEP,AI_GW,PROMPT,RISK,LLM,OUTPUT,DLP,LOGS,SIEM,DETECTION security;
-class COMPLIANCE,GDPR,NIS2,ISO,SOC,HIPAA,SOX,GLBA governance;
-class AWS,AZURE,GCP,K8S_AWS,K8S_AZURE,K8S_GCP cloud;
-```
 _________________________________________
 
 ### Research Outputs
