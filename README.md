@@ -208,27 +208,77 @@ _________________________________________
 ### ARCHITECTURE DIAGRAMS:
 
 ### Zero Trust Architecture
+
 ```mermaid
 flowchart LR
 
-User --> IAM[Identity Provider]
-IAM --> MFA[MFA Verification]
-MFA --> Access[Policy Decision Point]
+%% =====================================================
+%% USER ACCESS
+%% =====================================================
 
-Access --> AWS[AWS Workloads]
-Access --> Azure[Azure Workloads]
-Access --> GCP[GCP Workloads]
-Access --> K8s[Kubernetes Cluster]
+User["User / Device"] --> IAM["Identity Provider"]
 
-K8s --> OPA[OPA/Gatekeeper]
-K8s --> Falco[Runtime Security]
+IAM --> MFA["MFA Verification"]
 
-AWS --> SIEM[SIEM/XDR]
+MFA --> Access["Policy Decision Point"]
+
+%% =====================================================
+%% MULTI-CLOUD ACCESS
+%% =====================================================
+
+Access --> AWS["AWS Workloads"]
+
+Access --> Azure["Azure Workloads"]
+
+Access --> GCP["GCP Workloads"]
+
+Access --> K8s["Kubernetes Cluster"]
+
+%% =====================================================
+%% KUBERNETES SECURITY
+%% =====================================================
+
+K8s --> OPA["OPA / Gatekeeper"]
+
+K8s --> Falco["Runtime Security"]
+
+%% =====================================================
+%% SIEM + DETECTION
+%% =====================================================
+
+AWS --> SIEM["SIEM / XDR"]
+
 Azure --> SIEM
+
 GCP --> SIEM
+
 Falco --> SIEM
 
-SIEM --> SOC[Security Operations]
+SIEM --> SOC["Security Operations Center"]
+
+%% =====================================================
+%% COLOR DEFINITIONS
+%% =====================================================
+
+classDef identity fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
+
+classDef cloud fill:#7d3c98,color:#ffffff,stroke:#512e5f,stroke-width:2px;
+
+classDef security fill:#239b56,color:#ffffff,stroke:#196f3d,stroke-width:2px;
+
+classDef monitoring fill:#b03a2e,color:#ffffff,stroke:#922b21,stroke-width:2px;
+
+%% =====================================================
+%% APPLY COLORS
+%% =====================================================
+
+class User,IAM,MFA,Access identity;
+
+class AWS,Azure,GCP,K8s cloud;
+
+class OPA,Falco security;
+
+class SIEM,SOC monitoring;
 ```
 ________________________________________
 #### THREAT SCENARIOS
@@ -269,20 +319,53 @@ ________________________________________
 - CIS Kubernetes Benchmark
 _________________________________________
 ### AI Security Governance Flow
+
 ```mermaid
 flowchart LR
 
-User --> Input[Input Validation]
+%% =====================================================
+%% USER INPUT
+%% =====================================================
 
-Input --> Filter[Prompt Injection Detection]
+User["User / Application"] --> Input["Input Validation"]
 
-Filter --> AI[LLM / AI Service]
+Input --> Filter["Prompt Injection Detection"]
 
-AI --> Logging[AI Interaction Logging]
+%% =====================================================
+%% AI EXECUTION
+%% =====================================================
 
-Logging --> SIEM[SIEM Monitoring]
+Filter --> AI["LLM / AI Service"]
 
-SIEM --> SOC[Security Operations]
+%% =====================================================
+%% LOGGING + MONITORING
+%% =====================================================
+
+AI --> Logging["AI Interaction Logging"]
+
+Logging --> SIEM["SIEM Monitoring"]
+
+SIEM --> SOC["Security Operations Center"]
+
+%% =====================================================
+%% COLOR DEFINITIONS
+%% =====================================================
+
+classDef input fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
+
+classDef ai fill:#7d3c98,color:#ffffff,stroke:#512e5f,stroke-width:2px;
+
+classDef monitoring fill:#239b56,color:#ffffff,stroke:#196f3d,stroke-width:2px;
+
+%% =====================================================
+%% APPLY COLORS
+%% =====================================================
+
+class User,Input,Filter input;
+
+class AI ai;
+
+class Logging,SIEM,SOC monitoring;
 ```
 ________________________________________
 #### THREAT SCENARIOS
@@ -323,23 +406,73 @@ ________________________________________
 - DORA operational resilience
 ________________________________________
 ### Secure CI/CD Pipeline
+
 ```mermaid
 flowchart LR
 
-Dev[Developer] --> GitHub[GitHub Repo]
+%% =====================================================
+%% SOURCE CONTROL
+%% =====================================================
 
-GitHub --> SAST[SAST Scan]
-SAST --> IaC[IaC Security Scan]
-IaC --> OPA[OPA Policy Validation]
-OPA --> Build[Artifact Build]
+Dev["Developer"] --> GitHub["GitHub Repository"]
 
-Build --> Sign[Artifact Signing]
-Sign --> Registry[Container Registry]
+%% =====================================================
+%% SECURITY VALIDATION
+%% =====================================================
 
-Registry --> K8s[Kubernetes Deployment]
+GitHub --> SAST["SAST Scan"]
 
-K8s --> Runtime[Runtime Security]
-Runtime --> SIEM[SIEM Monitoring]
+SAST --> IaC["IaC Security Scan"]
+
+IaC --> OPA["OPA Policy Validation"]
+
+%% =====================================================
+%% BUILD + SIGNING
+%% =====================================================
+
+OPA --> Build["Artifact Build"]
+
+Build --> Sign["Artifact Signing"]
+
+Sign --> Registry["Container Registry"]
+
+%% =====================================================
+%% DEPLOYMENT
+%% =====================================================
+
+Registry --> K8s["Kubernetes Deployment"]
+
+%% =====================================================
+%% RUNTIME SECURITY
+%% =====================================================
+
+K8s --> Runtime["Runtime Security"]
+
+Runtime --> SIEM["SIEM Monitoring"]
+
+%% =====================================================
+%% COLOR DEFINITIONS
+%% =====================================================
+
+classDef source fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
+
+classDef security fill:#239b56,color:#ffffff,stroke:#196f3d,stroke-width:2px;
+
+classDef build fill:#7d3c98,color:#ffffff,stroke:#512e5f,stroke-width:2px;
+
+classDef monitoring fill:#b03a2e,color:#ffffff,stroke:#922b21,stroke-width:2px;
+
+%% =====================================================
+%% APPLY COLORS
+%% =====================================================
+
+class Dev,GitHub source;
+
+class SAST,IaC,OPA,Runtime security;
+
+class Build,Sign,Registry,K8s build;
+
+class SIEM monitoring;
 ```
 ________________________________________
 
