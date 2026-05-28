@@ -24,5 +24,4 @@ jobs:
           sudo mv opa /usr/local/bin/
 
       - name: Run tests
-        run: python3 resilience/validate_policies.py
-        
+        run: python3 resilience/validate_policies.py      
