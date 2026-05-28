@@ -1,27 +1,53 @@
 name: SARTA Policy Engine CI
 
-on: [push]
+env:
+FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+on:
+push:
+branches:
+- main
+workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+test:
+runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+```
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+  - name: Verify repository structure
+    run: |
+      echo "=== ROOT DIRECTORY ==="
+      pwd
+      echo "=== FILE TREE ==="
+      ls -R
 
-      - name: Install dependencies
-        run: pip install numpy matplotlib
+  - name: Set up Python
+    uses: actions/setup-python@v5
+    with:
+      python-version: "3.11"
 
-      - name: Install OPA
-        run: |
-          curl -L -o opa https://openpolicyagent.org/downloads/latest/opa_linux_amd64_static
-          chmod +x opa
-          sudo mv opa /usr/local/bin/
+  - name: Install Python dependencies
+    run: |
+      python -m pip install --upgrade pip
+      pip install numpy matplotlib
 
-      - name: Run tests
-        run: python3 resilience/validate_policies.py      
+  - name: Install OPA
+    run: |
+      curl -L -o opa https://openpolicyagent.org/downloads/latest/opa_linux_amd64_static
+      chmod +x opa
+      sudo mv opa /usr/local/bin/
+      opa version
+
+  - name: Verify validation script exists
+    run: |
+      test -f resilience/validate_policies.py && echo "Validation script found"
+
+  - name: Run validation tests
+    run: |
+      python3 resilience/validate_policies.py
+```
+  
