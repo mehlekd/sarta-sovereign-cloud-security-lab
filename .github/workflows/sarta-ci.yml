@@ -2,7 +2,7 @@ name: SARTA Policy Engine CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -13,12 +13,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Show repository contents (debug)
+      - name: Show workspace (DEBUG)
         run: |
-          echo "=== WORKSPACE ==="
+          echo "=== WORKING DIRECTORY ==="
           pwd
-          echo "=== FILE TREE ==="
+          echo "=== FULL REPOSITORY TREE ==="
           ls -R
+
+      - name: Verify resilience folder exists
+        run: |
+          if [ -d "./resilience" ]; then
+            echo "resilience folder FOUND"
+          else
+            echo "resilience folder NOT FOUND"
+            exit 1
+          fi
+
+      - name: Verify validate script exists (robust check)
+        run: |
+          echo "Checking file..."
+          ls -la ./resilience || true
+
+          if [ -f "./resilience/validate_policies.py" ]; then
+            echo "VALIDATION SCRIPT FOUND"
+          else
+            echo "VALIDATION SCRIPT MISSING"
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,12 +58,7 @@ jobs:
           sudo mv opa /usr/local/bin/
           opa version
 
-      - name: Run validation (safe mode)
+      - name: Run validation script
         run: |
-          if [ -f resilience/validate_policies.py ]; then
-            echo "Found script, running..."
-            python3 resilience/validate_policies.py
-          else
-            echo "ERROR: resilience/validate_policies.py NOT FOUND"
-            exit 1
-          fi
+          echo "Running validation script..."
+          python3 ./resilience/validate_policies.py
