@@ -41,6 +41,13 @@ jobs:
           sudo mv opa /usr/local/bin/
           opa version
 
+      - name: Debug file tree
+        run: |
+          echo "=== WORKSPACE ==="
+          pwd
+          echo "=== FULL TREE ==="
+          ls -R
+
       - name: Verify validation script exists
         run: |
           test -f resilience/validate_policies.py && echo "Validation script found"
