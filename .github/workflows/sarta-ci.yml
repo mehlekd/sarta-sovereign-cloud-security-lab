@@ -1,12 +1,8 @@
 name: SARTA Policy Engine CI
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -17,9 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Verify repository structure
+      - name: Show repository contents (debug)
         run: |
-          echo "=== ROOT DIRECTORY ==="
+          echo "=== WORKSPACE ==="
           pwd
           echo "=== FILE TREE ==="
           ls -R
@@ -29,7 +25,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install numpy matplotlib
@@ -41,17 +37,12 @@ jobs:
           sudo mv opa /usr/local/bin/
           opa version
 
-      - name: Debug file tree
+      - name: Run validation (safe mode)
         run: |
-          echo "=== WORKSPACE ==="
-          pwd
-          echo "=== FULL TREE ==="
-          ls -R
-
-      - name: Verify validation script exists
-        run: |
-          test -f resilience/validate_policies.py && echo "Validation script found"
-
-      - name: Run validation tests
-        run: |
-          python3 resilience/validate_policies.py
+          if [ -f resilience/validate_policies.py ]; then
+            echo "Found script, running..."
+            python3 resilience/validate_policies.py
+          else
+            echo "ERROR: resilience/validate_policies.py NOT FOUND"
+            exit 1
+          fi
