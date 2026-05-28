@@ -1,0 +1,33 @@
+(Secure CI/CD Pipeline Examples using GitHub Actions)
+name: "SARTA Secure CI/CD Compliance Pipeline"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  compliance-and-security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Source Code"
+        uses: actions/checkout@v4
+
+      - name: "Execute Infrastructure-as-Code Static Analysis"
+        uses: bridgecrewio/checkov-action@master
+        with:
+          framework: terraform
+          output_format: cli
+
+      - name: "Validate Static Policy Engine Guardrails"
+        uses: open-policy-agent/conftest-action@master
+        with:
+          policy: opa-policies/
+          files: terraform/main.tf
+
+      - name: "Generate Software Bill of Materials (SBOM)"
+        uses: anchore/sbom-action@v0
+        with:
+          format: spdx-json
+          output-file: "sbom.spdx.json"

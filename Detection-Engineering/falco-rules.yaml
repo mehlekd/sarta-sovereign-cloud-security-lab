@@ -1,0 +1,14 @@
+(Detection Logic and Runtime Monitoring Rules)
+- rule: SARTA Kubernetes Privilege Escalation Attempt
+  desc: Detects an unauthorized attempt to modify critical cluster cluster-role bindings.
+  condition: kevt.type="clusterrolebindings" and kevt.verb in (create, update, patch) and not user.name in (system:serviceaccount:kube-system:generic)
+  output: "Anomalous cluster role binding modification detected (user=%user.name verb=%kevt.verb resource=%kevt.name)"
+  priority: CRITICAL
+  tags: [k8s, mitre_privilege_escalation, dora_compliance]
+
+- rule: Anomalous AI Workload Outbound Connection
+  desc: Detects an AI runtime container attempting an unauthorized external network socket connection.
+  condition: container.image startswith "openai/" or container.image startswith "huggingface/" and outbound and not fd.sip in (10.0.0.0/8, 172.16.0.0/12)
+  output: "Unauthorized external socket initiated by AI workload (container=%container.id image=%container.image target=%fd.sip)"
+  priority: HIGH
+  tags: [ai_governance, network, nis2_compliance]
