@@ -50,7 +50,10 @@ The lab environment is decoupled into five core research tracks, mapped directly
 SARTA evaluates the stability, latency, and enforcement efficiency of its policies by executing simulated attack vectors. Full scenario playbooks can be analyzed within the `/resilience` and `/scenarios` tracks:
 
 ### Lab Scenario A: Kubernetes Privilege Escalation (`/scenarios/k8s-privilege-escalation.md`)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ab002b (Populate SARTA Research Lab Framework Assets)
 *   **Abstract Execution:** Simulates an attacker gaining control of a baseline container and attempting to abuse excessive RBAC permissions to achieve cluster-wide administrative access.
 *   **SARTA Mitigation Controls:** OPA Gatekeeper blocks the deployment of non-compliant manifests, while Falco monitors kernel state modifications to intercept unauthorized runtime `kubectl` behavior.
 *   **Regulatory Mapping:** DORA Article 6 (ICT Risk Management), NIS2 Essential Security Metrics, and CIS Kubernetes Benchmarks.
@@ -68,6 +71,7 @@ SARTA evaluates the stability, latency, and enforcement efficiency of its polici
 ---
 
 ## 🔬 Core Architecture Principles
+<<<<<<< HEAD
 
 ### Zero Trust by Design
 Enforces continuous, cryptographic verification across all execution paths. Trust is never implied based on location or infrastructure ownership.
@@ -93,4 +97,28 @@ This repository serves as the primary practical engineering foundation for a pro
 *   **Current Alignment Focus:** Open to Collaborative Research Programs, Funded PhD Positions, and EU Horizon Europe / NATO SPS Project Integration within the UK, Ireland, Netherlands, and wider EU ecosystems.
 
 
+=======
 
+### Zero Trust by Design
+Enforces continuous, cryptographic verification across all execution paths. Trust is never implied based on location or infrastructure ownership.
+>>>>>>> 8ab002b (Populate SARTA Research Lab Framework Assets)
+
+### Sovereign Cloud Governance
+Translates regional digital compliance requirements into automated cloud guardrails, ensuring reliable data isolation across diverse systems.
+
+### Resilience-by-Design
+Builds self-healing infrastructure patterns aligned with DORA specifications to maintain system availability during localized provider outages.
+
+### Policy-as-Code Control Plane
+Decouples compliance verification from manual audit intervals, embedding governance checks directly into deployment pipelines.
+
+---
+
+## 🚀 Research Collaboration & Academic Outreach
+
+This repository serves as the primary practical engineering foundation for a prospective doctoral thesis exploring digital sovereignty and adaptive systems resilience. 
+
+*   **Principal Investigator:** Mr. Mehlek Dawveed, MSc.
+*   **Contact Email:** [mehlekd@gmail.com](mailto:mehlekd@gmail.com)
+*   **Professional Matrix:** [LinkedIn Portfolio](https://linkedin.com)
+*   **Current Alignment Focus:** Open to Collaborative Research Programs, Funded PhD Positions, and EU Horizon Europe / NATO SPS Project Integration within the UK, Ireland, Netherlands, and wider EU ecosystems.
