@@ -1,645 +1,96 @@
-# Applied Research & Architecture Lab
+# SARTA: Sovereign Adaptive Resilience & Trust Architecture Lab
+> **Academic Research & Applied Architecture Initiative**  
+> *A Framework for Continuous Policy-as-Code Enforcement, Cryptographic Isolation, and Automated Compliance Engineering under DORA, NIS2, and the EU AI Act.*
 
-### Welcome to SARTA – Sovereign Adaptive Resilience & Trust Architecture Lab
-A research-driven initiative focused on designing and validating next-generation cloud security, sovereign architectures, and AI security systems. This repository represents an applied cyber resilience and sovereign cloud security research initiative focused on:
+---
 
-## 🟦 Cloud & Sovereign Security
-- Sovereign Cloud Security Architecture
-- Data Residency & Compliance-Aware System Design
-- Multi-Cloud Security Standardization
-## 🟪 Identity & Zero Trust Security
-- Identity-Centric Security Architectures
-- Zero Trust Enterprise Security Models
-- Workload Identity & Access Control Systems
-## 🟩 AI Security & Governance
-- AI Security Governance Frameworks
-- LLM Risk Management & Prompt Injection Defense
-- Secure AI Deployment Architectures
-## 🟧 Kubernetes & Cloud-Native Security
-- Kubernetes Security Architecture
-- Policy-as-Code Enforcement (OPA / Gatekeeper models)
-- Runtime Security & Workload Protection
+## 🔬 Research Overview & Problem Space
+As critical infrastructures migrate mission-critical workloads to heterogeneous multi-cloud fabrics, they face an inherent architectural conflict: balancing the scalability of distributed cloud-native ecosystems with strict regional digital sovereignty laws (**EU NIS2 Directive**), financial system mandates (**Digital Operational Resilience Act - DORA**), and algorithmic accountability rules (**EU AI Act**).
 
-### Founder, Mr. Mehlek Dawveed "Principal Sovereign Cloud Security & Operational Resilience Architect"
+Legacy Cloud Security Posture Management (CSPM) and perimeter security frameworks fail to address these environments due to three structural issues:
+1. **Point-in-Time Auditing:** Passively capturing system drift asynchronously, creating significant security visibility gaps between manual or scheduled audits.
+2. **Network Perimeter Bias:** Tying authorization parameters to dynamic network planes (IPs, subnets) rather than tracking immutable workload identities.
+3. **Passive Intrusion Detection:** Focusing on routing alerts to human security operations centers (SOC) instead of initiating low-latency, kernel-level automated containment loops.
 
-We aim to connect enterprise security architecture with applied research in globally regulated, sovereign digital infrastructure environments. Our lab is based on Zero Trust Architecture, Kubernetes security, AI governance, and policy-as-code controls, aligned with global governance, regulatory, compliance, risk, privacy, and operational resilience requirements to counter emerging threats. The project integrates cloud-native security engineering, identity-centric governance, detection engineering, and resilience-by-design principles across multi-cloud and Kubernetes environments.
+**SARTA** introduces an open-source, structurally verified reference architecture that treats **Sovereignty-by-Design** as a continuous, algorithmic state machine. By integrating **Zero Trust Architecture (NIST SP 800-207)** with **Policy-as-Code engines (OPA/Gatekeeper)**, location-agnostic identities (**SPIFFE/SPIRE**), and kernel-layer monitoring (**eBPF/Falco**), SARTA establishes self-healing, regulatory-compliant execution enclaves within multi-cloud topologies.
 
-### SARTA is aligned with the following:
-- DORA (Digital Operational Resilience Act)
-- NIS2 Directive
-- GDPR
-- ISO 27001
-- EU AI Act
-- NIST SP 800-207 (Zero Trust)
-- Secure AI Workload Governance
-- IAM / PAM / Identity Federation
-- Detection Engineering & SIEM Modernization
-- Multi-Cloud Security Strategy (AWS / MS AZURE / GCP)
-- Supply Chain Security (SLSA / SBOM / Sigstore)
-_________________________________________
-## Unified Sovereign AI Security Architecture (Zero Trust, Multi-Cloud, AI Governance)
+---
 
-Description
+## 🗺️ Core Architecture Domains & Lab Schema
 
-Reference architecture for sovereign AI systems designed for enterprise and regulated environments. Integrates Zero Trust security principles, AI governance, multi-cloud execution, and continuous compliance. Covers identity and access management (IAM), policy decision/enforcement (PDP/PEP), AI security controls, data loss prevention (DLP), observability via SIEM, and compliance mapping across major regulatory frameworks.
+The lab environment is decoupled into five core research tracks, mapped directly to active directories within this repository:
 
-```mermaid
-flowchart TB
+### 🟦 1. Sovereign Cloud Architecture (`/terraform`, `/architecture`)
+*   **Geopolitical Enforcement:** Programmatic data residency validation and sovereign region restriction schemas.
+*   **Encryption Automation:** Enforcement of envelope encryption-by-default models across multi-cloud storage tiers (AWS, Azure, GCP).
+*   **Infrastructure-as-Code (IaC) Validation:** Declarative state-machine blueprints matching absolute containment parameters.
 
-%% =====================================================
-%% 1. ACCESS LAYER
-%% =====================================================
+### 🟪 2. Identity & Zero Trust Verification (`/iam`)
+*   **Workload Identity Federation:** SPIFFE/SPIRE implementations that remove reliance on static network planes.
+*   **Identity as the Control Plane:** Cryptographically enforced Mutual TLS (mTLS), conditional access schemas, and fine-grained role-based access control (RBAC).
 
-subgraph L1["1. Access Layer"]
+### 🟩 3. AI Security Governance (`/ai-security`, `/whitepapers`)
+*   **Adversarial Mitigation Layers:** Architectural structures targeting Prompt Injection isolation and Data Poisoning prevention.
+*   **Deterministic Auditing:** Cryptographically signed interaction logging and strict semantic token validation pipelines.
+*   **AI Enclave Isolation:** Secure, restricted workload segmentation boundaries for Large Language Models (LLMs) deployed within regulated corporate domains.
 
-USER["Users / Applications / APIs / Agents"]
+### 🟧 4. Kubernetes & Cloud-Native Dependability (`/kubernetes`, `/opa-policies`)
+*   **Admission Control Automation:** Rego policy-as-code engines acting as strict compile-time admission controllers via OPA Gatekeeper.
+*   **Pod Security Standards:** Immutable cluster isolation models and programmatic runtime protection rules.
 
-end
+### 🟨 5. Detection Engineering & Chaos Telemetry (`/detection-engineering`, `/cicd`)
+*   **Kernel Telemetry Processing:** Real-time system call monitoring using low-overhead eBPF agents.
+*   **MITRE ATT&CK Mapping:** Threat detection pipelines funneling security analytics into telemetry pools (Splunk, Microsoft Sentinel).
+*   **Supply Chain Resilience:** Multi-stage DevSecOps integration using SLSA, automated Software Bill of Materials (SBOM) ingestion, and Sigstore artifact signing.
 
-USER --> EDGE["Secure AI Edge Gateway"]
+---
 
-%% =====================================================
-%% 2. IDENTITY + ZERO TRUST CONTROL PLANE
-%% =====================================================
+## 🛡️ Empirical Validation: Active Threat Scenario Labs
 
-subgraph L2["2. Identity + Zero Trust Control Plane"]
+SARTA evaluates the stability, latency, and enforcement efficiency of its policies by executing simulated attack vectors. Full scenario playbooks can be analyzed within the `/resilience` and `/scenarios` tracks:
 
-EDGE --> IDP["Identity Provider (IAM / SSO / MFA)"]
+### Lab Scenario A: Kubernetes Privilege Escalation (`/scenarios/k8s-privilege-escalation.md`)
 
-IDP --> PDP["Policy Decision Engine (Zero Trust)"]
+*   **Abstract Execution:** Simulates an attacker gaining control of a baseline container and attempting to abuse excessive RBAC permissions to achieve cluster-wide administrative access.
+*   **SARTA Mitigation Controls:** OPA Gatekeeper blocks the deployment of non-compliant manifests, while Falco monitors kernel state modifications to intercept unauthorized runtime `kubectl` behavior.
+*   **Regulatory Mapping:** DORA Article 6 (ICT Risk Management), NIS2 Essential Security Metrics, and CIS Kubernetes Benchmarks.
 
-PDP --> PEP["Policy Enforcement Layer (API Gateway / Mesh)"]
+### Lab Scenario B: AI Prompt Injection Controls (`/scenarios/prompt-injection.md`)
+*   **Abstract Execution:** Simulates adversarial user text inputs designed to bypass system guardrails, alter model operational policies, and extract confidential data layer details.
+*   **SARTA Mitigation Controls:** Intercepts payload traffic at the proxy gateway layer, applies real-time semantic screening, and relies on automated eBPF runtime quarantines if anomalous data-plane calls occur.
+*   **Regulatory Mapping:** EU AI Act Risk Management Framework, GDPR Data Minimization Mandates.
 
-end
+### Additional Active Security Scenarios
+*   **Identity Federation Abuse:** Testing token manipulation and tracking vector movement.
+*   **Cloud Lateral Movement:** Measuring cross-tenant isolation boundaries during explicit component compromise.
+*   **Cross-Region Sovereignty Violations:** Evaluating if OPA policies instantly block automated data replication tasks attempting to bypass geographic boundaries.
 
-PEP --> AI_GW["AI Security Gateway"]
+---
 
-%% =====================================================
-%% 3. AI EXECUTION LAYER
-%% =====================================================
+## 🔬 Core Architecture Principles
 
-subgraph L3["3. AI Execution Layer"]
+### Zero Trust by Design
+Enforces continuous, cryptographic verification across all execution paths. Trust is never implied based on location or infrastructure ownership.
 
-AI_GW --> PROMPT["Prompt Filtering & Validation"]
+### Sovereign Cloud Governance
+Translates regional digital compliance requirements into automated cloud guardrails, ensuring reliable data isolation across diverse systems.
 
-PROMPT --> RISK["Context & Risk Evaluation Engine"]
+### Resilience-by-Design
+Builds self-healing infrastructure patterns aligned with DORA specifications to maintain system availability during localized provider outages.
 
-RISK --> LLM["AI / LLM Execution Environment"]
+### Policy-as-Code Control Plane
+Decouples compliance verification from manual audit intervals, embedding governance checks directly into deployment pipelines.
 
-LLM --> OUTPUT["Model Output Generation"]
+---
 
-OUTPUT --> DLP["Data Loss Prevention / Redaction"]
+## 🚀 Research Collaboration & Academic Outreach
 
-end
+This repository serves as the primary practical engineering foundation for a prospective doctoral thesis exploring digital sovereignty and adaptive systems resilience. 
 
-DLP --> USER
+*   **Principal Investigator:** Mr. Mehlek Dawveed, MSc.
+*   **Contact Email:** [mehlekd@gmail.com](mailto:mehlekd@gmail.com)
+*   **Professional Matrix:** [LinkedIn Portfolio](https://linkedin.com)
+*   **Current Alignment Focus:** Open to Collaborative Research Programs, Funded PhD Positions, and EU Horizon Europe / NATO SPS Project Integration within the UK, Ireland, Netherlands, and wider EU ecosystems.
 
-%% =====================================================
-%% 4. SECURITY OBSERVABILITY LAYER
-%% =====================================================
-
-subgraph L4["4. Security Observability Layer"]
-
-AI_GW --> LOGS["Unified Logging Layer"]
-
-PDP --> LOGS
-
-LLM --> LOGS
-
-LOGS --> SIEM["Central SIEM Platform"]
-
-SIEM --> DETECTION["Threat Detection & Behavioral Analytics"]
-
-end
-
-%% =====================================================
-%% 5. COMPLIANCE & GOVERNANCE LAYER
-%% =====================================================
-
-subgraph L5["5. Compliance & Governance Layer"]
-
-PDP --> COMPLIANCE["Compliance Mapping Engine"]
-
-COMPLIANCE --> GDPR["GDPR"]
-
-COMPLIANCE --> NIS2["NIS2"]
-
-COMPLIANCE --> ISO["ISO 27001"]
-
-COMPLIANCE --> SOC["SOC 2"]
-
-COMPLIANCE --> HIPAA["HIPAA"]
-
-COMPLIANCE --> SOX["SOX"]
-
-COMPLIANCE --> GLBA["GLBA"]
-
-end
-
-%% =====================================================
-%% 6. MULTI-CLOUD EXECUTION LAYER
-%% =====================================================
-
-subgraph L6["6. Multi-Cloud Execution Layer"]
-
-LLM --> AWS["AWS AI + Compute Services"]
-
-LLM --> AZURE["Microsoft Azure AI + Security Stack"]
-
-LLM --> GCP["Google Cloud AI Platform"]
-
-AWS --> K8S_AWS["Amazon EKS"]
-
-AZURE --> K8S_AZURE["Azure AKS"]
-
-GCP --> K8S_GCP["Google GKE"]
-
-end
-
-%% =====================================================
-%% OPTIONAL STYLING
-%% =====================================================
-
-classDef security fill:#0b3d91,color:#ffffff,stroke:#082567,stroke-width:2px;
-classDef governance fill:#145a32,color:#ffffff,stroke:#0b3d1f,stroke-width:2px;
-classDef cloud fill:#6c3483,color:#ffffff,stroke:#4a235a,stroke-width:2px;
-classDef userlayer fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
-
-class USER,EDGE userlayer;
-class IDP,PDP,PEP,AI_GW,PROMPT,RISK,LLM,OUTPUT,DLP,LOGS,SIEM,DETECTION security;
-class COMPLIANCE,GDPR,NIS2,ISO,SOC,HIPAA,SOX,GLBA governance;
-class AWS,AZURE,GCP,K8S_AWS,K8S_AZURE,K8S_GCP cloud;
-```
-_________________________________________
-### Security Domains:
-#### Identity & Access Governance
-- MFA (Full Enforcement) 
-- Least Privilege IAM
-- RBAC Enforcement
-- Conditional Access
-- Federated Identity Governance
-- Workload Identity Architecture
-_________________________________________
-#### Zero Trust Kubernetes Security Architecture (IAM, SIEM, PAM, SPIFFE/SPIRE)
-
-Description
-
-Reference architecture for implementing Zero Trust security in Kubernetes environments. Covers identity and access management (IAM), policy decision and enforcement (PDP/PEP), privileged access management (PAM), workload identity (SPIFFE/SPIRE), and full observability via SIEM and threat detection pipelines.
-
-```mermaid
-flowchart TB
-
-%% =====================================================
-%% TOP LAYER
-%% =====================================================
-
-Threat["Threat Detection Engine"]
-
-Threat --> SIEM["Observability / SIEM"]
-
-%% =====================================================
-%% USER ACCESS
-%% =====================================================
-
-User["User / Admin / Developer"]
-
-User --> IDP["Identity Provider<br/>IAM / SSO / MFA"]
-
-SIEM --> IDP
-
-%% =====================================================
-%% PRIVILEGED ACCESS
-%% =====================================================
-
-SIEM --> PAM["Privileged Access Management"]
-
-PAM --> IDP
-
-%% =====================================================
-%% ZERO TRUST CONTROL PLANE
-%% =====================================================
-
-IDP --> PDP["Policy Decision Point<br/>Zero Trust Engine"]
-
-PDP --> PEP["Policy Enforcement Point<br/>API Gateway / Service Mesh"]
-
-%% =====================================================
-%% KUBERNETES
-%% =====================================================
-
-subgraph K8S["Kubernetes Environment"]
-
-PEP --> API["K8s API Server"]
-
-API --> RBAC["RBAC Policies"]
-
-RBAC --> PODS["Workloads / Pods"]
-
-SECRETS["Secrets Manager"]
-
-end
-
-%% =====================================================
-%% WORKLOAD IDENTITY
-%% =====================================================
-
-SPIFFE["Workload Identity<br/>SPIFFE / SPIRE"]
-
-SPIFFE --> PODS
-
-%% =====================================================
-%% OBSERVABILITY FEEDS
-%% =====================================================
-
-PAM --> API
-
-SIEM --> API
-
-%% =====================================================
-%% COLORS
-%% =====================================================
-
-classDef detection fill:#b03a2e,color:#ffffff,stroke:#922b21,stroke-width:2px;
-
-classDef identity fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
-
-classDef zerotrust fill:#239b56,color:#ffffff,stroke:#196f3d,stroke-width:2px;
-
-classDef kubernetes fill:#7d3c98,color:#ffffff,stroke:#512e5f,stroke-width:2px;
-
-classDef workload fill:#ca6f1e,color:#ffffff,stroke:#935116,stroke-width:2px;
-
-%% =====================================================
-%% APPLY COLORS
-%% =====================================================
-
-class Threat,SIEM detection;
-
-class User,IDP,PAM identity;
-
-class PDP,PEP zerotrust;
-
-class API,RBAC,SECRETS kubernetes;
-
-class PODS,SPIFFE workload;
-```
-________________________________________
-#### Kubernetes Security
-- Pod Security Standards
-- Runtime Security Controls
-- Network Policy Segmentation
-- Admission Control Enforcement
-- Supply Chain Protection
-________________________________________
-### Zero Trust Cloud Security Architecture (IAM, Kubernetes, SIEM/XDR, Runtime Security)
-
-Description
-
-Reference Zero Trust architecture for securing multi-cloud and Kubernetes environments. Implements identity-based access control (IAM + MFA), policy decision enforcement, workload segmentation, Kubernetes security controls (OPA/Gatekeeper, Falco), and centralized threat detection via SIEM/XDR and SOC operations.
-
-```mermaid
-flowchart LR
-
-%% =====================================================
-%% USER ACCESS
-%% =====================================================
-
-User["User / Device"] --> IAM["Identity Provider"]
-
-IAM --> MFA["MFA Verification"]
-
-MFA --> Access["Policy Decision Point"]
-
-%% =====================================================
-%% MULTI-CLOUD ACCESS
-%% =====================================================
-
-Access --> AWS["AWS Workloads"]
-
-Access --> Azure["Azure Workloads"]
-
-Access --> GCP["GCP Workloads"]
-
-Access --> K8s["Kubernetes Cluster"]
-
-%% =====================================================
-%% KUBERNETES SECURITY
-%% =====================================================
-
-K8s --> OPA["OPA / Gatekeeper"]
-
-K8s --> Falco["Runtime Security"]
-
-%% =====================================================
-%% SIEM + DETECTION
-%% =====================================================
-
-AWS --> SIEM["SIEM / XDR"]
-
-Azure --> SIEM
-
-GCP --> SIEM
-
-Falco --> SIEM
-
-SIEM --> SOC["Security Operations Center"]
-
-%% =====================================================
-%% COLOR DEFINITIONS
-%% =====================================================
-
-classDef identity fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
-
-classDef cloud fill:#7d3c98,color:#ffffff,stroke:#512e5f,stroke-width:2px;
-
-classDef security fill:#239b56,color:#ffffff,stroke:#196f3d,stroke-width:2px;
-
-classDef monitoring fill:#b03a2e,color:#ffffff,stroke:#922b21,stroke-width:2px;
-
-%% =====================================================
-%% APPLY COLORS
-%% =====================================================
-
-class User,IAM,MFA,Access identity;
-
-class AWS,Azure,GCP,K8s cloud;
-
-class OPA,Falco security;
-
-class SIEM,SOC monitoring;
-```
-____________
-#### THREAT SCENARIOS
-/scenarios/k8s-privilege-escalation.md
-##### Threat Scenario: Kubernetes Privilege Escalation
-##### Scenario Overview
-An attacker exploits excessive RBAC permissions within a Kubernetes environment to gain elevated cluster privileges.
-________________________________________
-#### Attack Path
-1.	Compromised workload or credential
-2.	Excessive RBAC permissions abused
-3.	Cluster-wide administrative access obtained
-4.	Lateral movement across workloads
-________________________________________
-#### Security Risks
-- Cluster Compromise
-- Workload Manipulation
-- Data Exposure
-- Service Disruption
-________________________________________
-#### Mitigation Controls
-- Least Privilege RBAC
-- Admission Control Policies
-- Runtime Security Monitoring
-- Namespace Segmentation
-- Network Policy Enforcement
-- Service Account Restrictions
-________________________________________
-#### Detection Strategy
-- Monitor Privileged Container Creation
-- Detect RBAC Modifications
-- Alert on Unauthorized Kubectl Activity
-- Monitor Abnormal Service Account Usage
-________________________________________
-#### Compliance Alignment
-- DORA
-- NIS2
-- CIS Kubernetes Benchmark
-_________________________________________
-#### Cloud Security
-- Encryption-By-Default
-- Sovereign Region Restrictions
-- Cloud-Native Segmentation
-- Infrastructure-as-Code Governance
-#### AI Security Governance
-- Prompt Injection Mitigation
-- AI Interaction Logging
-- Secure AI Workload Segmentation
-- Input Filtering and Validation
-#### Detection Engineering
-- Cloud-Native Telemetry
-- SIEM Integration
-- Threat Detection Logic
-- MITRE ATT&CK Aligned Detections
-________________________________________
-#### Threat Scenarios
-- Kubernetes Privilege Escalation
-- CI/CD Pipeline Compromise
-_________________________________________
-## Secure CI/CD Pipeline Architecture (SAST, IaC Scanning, OPA, Signing, Kubernetes, SIEM)
-
-Description
-
-A secure software delivery pipeline implementing DevSecOps best practices. Includes source control integration, static application security testing (SAST), infrastructure-as-code scanning, policy enforcement via OPA, artifact signing, container registry controls, Kubernetes deployment, runtime security monitoring, and centralized SIEM observability.
-
-```mermaid
-flowchart LR
-
-%% =====================================================
-%% SOURCE CONTROL
-%% =====================================================
-
-Dev["Developer"] --> GitHub["GitHub Repository"]
-
-%% =====================================================
-%% SECURITY VALIDATION
-%% =====================================================
-
-GitHub --> SAST["SAST Scan"]
-SAST --> IaC["IaC Security Scan"]
-IaC --> OPA["OPA Policy Validation"]
-
-%% =====================================================
-%% BUILD + SIGNING
-%% =====================================================
-
-OPA --> Build["Artifact Build"]
-Build --> Sign["Artifact Signing"]
-Sign --> Registry["Container Registry"]
-
-%% =====================================================
-%% DEPLOYMENT
-%% =====================================================
-
-Registry --> K8s["Kubernetes Deployment"]
-
-%% =====================================================
-%% RUNTIME SECURITY
-%% =====================================================
-
-K8s --> Runtime["Runtime Security"]
-Runtime --> SIEM["SIEM Monitoring"]
-
-%% =====================================================
-%% COLOR DEFINITIONS
-%% =====================================================
-
-classDef source fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
-classDef security fill:#239b56,color:#ffffff,stroke:#196f3d,stroke-width:2px;
-classDef build fill:#7d3c98,color:#ffffff,stroke:#512e5f,stroke-width:2px;
-classDef monitoring fill:#b03a2e,color:#ffffff,stroke:#922b21,stroke-width:2px;
-
-%% =====================================================
-%% APPLY COLORS
-%% =====================================================
-
-class Dev,GitHub source;
-class SAST,IaC,OPA,Runtime security;
-class Build,Sign,Registry,K8s build;
-class SIEM monitoring;
-```
-_________________________________________
-- Identity Federation Abuse
-- Cloud Lateral Movement
-- Prompt Injection Attacks
-- Cross-Region Sovereignty Violations
-_________________________________________
-#### Technologies
-AWS • Azure • GCP • Kubernetes • Terraform • OPA • Falco • Splunk • Sentinel
-_________________________________________
-
-### Architecture Principles:
-#### Zero Trust by Design
-Identity-centric security architecture enforcing least privilege, continuous verification, and segmented trust boundaries.
-#### Sovereign Cloud Governance
-Support for regional deployment restrictions, data residency enforcement, encryption governance, and sovereign operational controls.
-#### Resilience-by-Design
-Operational resilience engineering patterns aligned with DORA requirements for high-availability and regulated workloads.
-#### Policy-as-Code Governance
-Continuous enforcement of Kubernetes and cloud security controls using OPA/Gatekeeper and automated CI/CD validation.
-#### Secure AI Adoption
-AI governance controls support prompt injection mitigation, auditability, secure interaction logging, and AI workload segmentation.
-_________________________________________
-## AI Security Governance Flow (Prompt Injection Protection, SIEM Monitoring, SOC Response)
-
-Description
-
-A reference AI security governance architecture covering end-to-end risk controls for LLM-based systems. Includes input validation, prompt injection detection, AI service execution, interaction logging, and centralized monitoring via SIEM with SOC response workflows.
-
-### AI Security Governance Flow
-
-```mermaid
-flowchart LR
-
-%% =====================================================
-%% USER INPUT
-%% =====================================================
-
-User["User / Application"] --> Input["Input Validation"]
-
-Input --> Filter["Prompt Injection Detection"]
-
-%% =====================================================
-%% AI EXECUTION
-%% =====================================================
-
-Filter --> AI["LLM / AI Service"]
-
-%% =====================================================
-%% LOGGING + MONITORING
-%% =====================================================
-
-AI --> Logging["AI Interaction Logging"]
-
-Logging --> SIEM["SIEM Monitoring"]
-
-SIEM --> SOC["Security Operations Center"]
-
-%% =====================================================
-%% COLOR DEFINITIONS
-%% =====================================================
-
-classDef input fill:#1f618d,color:#ffffff,stroke:#154360,stroke-width:2px;
-
-classDef ai fill:#7d3c98,color:#ffffff,stroke:#512e5f,stroke-width:2px;
-
-classDef monitoring fill:#239b56,color:#ffffff,stroke:#196f3d,stroke-width:2px;
-
-%% =====================================================
-%% APPLY COLORS
-%% =====================================================
-
-class User,Input,Filter input;
-
-class AI ai;
-
-class Logging,SIEM,SOC monitoring;
-```
-________________________________________
-#### THREAT SCENARIOS
-/scenarios/prompt-injection.md
-##### Threat Scenario: AI Prompt Injection
-##### Scenario Overview
-An attacker attempts to manipulate an enterprise AI assistant using crafted prompts designed to bypass governance controls and expose sensitive information.
-________________________________________
-#### Attack Path
-1.	User submits malicious prompt input
-2.	AI model receives instruction override attempt
-3.	Prompt attempts data extraction or policy bypass
-4.	Sensitive enterprise information exposure risk introduced
-________________________________________
-#### Security Risks
-- Sensitive Data Leakage
-- Policy Circumvention
-- AI Governance Failure
-- Unauthorized Information Disclosure
-________________________________________
-#### Mitigation Controls
-- Prompt Filtering and Validation
-- Input Sanitization
-- AI Interaction Logging
-- Output Filtering
-- Role-Based AI Access Controls
-- Human Review Workflows
-________________________________________
-#### Detection Strategy
-- Monitor Abnormal Prompt Behavior
-- Detect Prompt Override Keywords
-- Log High-Risk Interaction Attempts
-- Alert on Repeated Policy Bypass Attempts
-________________________________________
-#### Compliance Alignment
-- EU AI Act
-- GDPR
-- DORA operational resilience
-_________________________________________
-### Compliance Alignment:
-#### DORA
-Operational resilience engineering, telemetry visibility, governance automation, and incident response alignment.
-#### NIS2
-Security governance, risk management, incident handling, and cloud operational controls.
-#### GDPR
-Regional data residency, encryption governance, and identity-centric access controls.
-#### EU AI Act
-AI governance, AI interaction monitoring, and secure AI workload management.
-_________________________________________
-### Research Outputs
-- Architecture reference models
-- Threat modeling scenarios
-- Policy-as-code implementations
-- Security control mappings
-- Cloud resilience engineering patterns
-- AI governance frameworks
-_________________________________________
-### Future Enhancements:
-- Multi-Cloud Sovereign Landing Zones
-- SPIFFE/SPIRE Workload Identity Integration
-- Advanced Kubernetes Runtime Detection
-- Secure AI Model Governance Controls
-- Resilience Simulation Exercises
-- Compliance-as-Code Automation
-_________________________________________
-### Repository Structure
-- /ai-security -> AI governance and workload protection controls
-- /architecture -> Architecture diagrams and reference models
-- /cicd -> Secure CI/CD pipeline examples
-- /detection-engineering -> Detection logic and monitoring rules
-- /iam -> Identity access management - rules and governance
-- /kubernetes -> Kubernetes security controls and policies
-- /opa-policies -> Policy-as-code governance controls
-- /resilience -> Operational resilience engineering patterns
-- /terraform -> Sovereign cloud landing zone infrastructure
-- /whitepapers -> operational-zero-trust-dora-nis2.md, sovereign-cloud-architecture.md, ai-governance-enterprise-cloud.md
-________________________________________
 
 
