@@ -29,7 +29,7 @@ It reframes cybersecurity from a static control problem into a **living autonomo
 
 ## 👤 Author, Mr. Mehlek Dawveed
 
-**Independent Security Architect & Researcher**
+**Principal Sovereign Cloud Security Architect & Researcher**
 
 ### Research Domains
 
