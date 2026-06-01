@@ -1,435 +1,583 @@
-# SARTA — Sovereign Adaptive Resilience & Trust Architecture
+# 🛡️ Sovereign Adaptive Resilience & Trust Architecture (SARTA)
 
-**Executive Research & Production Security Blueprint (v3 Autonomous Mesh)**
+> **A Research Reference Architecture for Autonomous Security, Digital Sovereignty, and Continuous Compliance**
 
-**Version:** v3
-**Format:** Mermaid Architecture Diagrams + SVG Assets
-**Focus:** Autonomous Security • Sovereign Cloud • Zero Trust • AI Governance • Continuous Compliance
-
----
-
-## Project Status
-
-| Category                 | Status         |
-| ------------------------ | -------------- |
-| Architecture Design      | ✅ Complete     |
-| Research Framework       | ✅ Complete     |
-| Reference Blueprint      | ✅ Complete     |
-| Prototype Implementation | 🚧 In Progress |
-| Production Validation    | ⏳ Planned      |
-| Community Contributions  | ✅ Open         |
-
-**Current Release:** v3 Autonomous Mesh
+![Status](https://img.shields.io/badge/status-active_research-blue)
+![Version](https://img.shields.io/badge/version-v3_autonomous_mesh-purple)
+![Focus](https://img.shields.io/badge/focus-zero_trust%20%7C%20AI_security%20%7C%20sovereignty-green)
+![License](https://img.shields.io/badge/license-Apache_2.0-lightgrey)
 
 ---
 
-## Abstract
+## 🌐 Abstract
 
-SARTA (Sovereign Adaptive Resilience & Trust Architecture) is an applied-research and production-oriented security architecture that treats security, compliance, operational resilience, and digital sovereignty as a continuously operating autonomous system.
+**SARTA (Sovereign Adaptive Resilience & Trust Architecture)** is a research-grade reference architecture exploring how security, trust, compliance, operational resilience, and digital sovereignty can be implemented as **continuously adaptive computational systems**.
 
-Rather than relying on static controls, periodic audits, or manually coordinated response workflows, SARTA integrates kernel-level sensing, identity-centric trust, AI-assisted decisioning, policy-as-code enforcement, and sovereign federation to create an adaptive security fabric capable of continuous monitoring, reasoning, response, and learning.
-
----
-
-## Table of Contents
-
-1. Executive Summary
-2. Why SARTA Exists
-3. Research Positioning
-4. Core Research Thesis
-5. Design Principles
-6. System Architecture
-7. Autonomous Security Loop
-8. Technology Stack
-9. Core Capabilities
-10. Threat Model
-11. Security Assumptions
-12. AI Governance
-13. Digital Immune System Model
-14. Repository Structure
-15. Compliance Alignment
-16. Key Metrics
-17. Example Attack Response Scenario
-18. Architecture Decision Records
-19. Reproducing the Demo
-20. Contribution & Governance
-21. Roadmap
-22. Accessibility Notes
-23. Style Guide
-24. References
-25. Citation
-26. License
+It reframes cybersecurity from a static control problem into a **living autonomous system** capable of sensing, reasoning, and responding in real time.
 
 ---
 
-# Executive Summary
+## 🎯 Core Objectives
+
+* 🧠 Advance research into autonomous security systems
+* ☁️ Define sovereign Zero Trust cloud architectures
+* 🔐 Model compliance as a continuous computational process
+* 🤖 Explore AI-assisted security governance
+* 🧩 Demonstrate systems architecture & security engineering at research level
+
+---
+
+## 👤 Author, Mr. Mehlek Dawveed
+
+**Independent Security Architect & Researcher**
+
+### Research Domains
+
+* Autonomous Security Systems
+* Zero Trust Architecture (Zero Trust Security)
+* AI Governance
+* Digital Sovereignty
+* Cloud Security Engineering
+* Distributed Trust Systems
+* Continuous Compliance Automation
+* Operational Resilience Engineering
+
+---
+
+## 🚦 Project Status
+
+| Area                   | Status         |
+| ---------------------- | -------------- |
+| Research Framework     | ✅ Complete     |
+| Reference Architecture | ✅ Complete     |
+| Threat Model           | ✅ Defined      |
+| Governance Model       | ✅ Defined      |
+| Prototype Systems      | 🚧 In Progress |
+| Production Validation  | ⏳ Future Work  |
+| Academic Publication   | ⏳ Planned      |
+
+---
+
+## 🧠 Core Idea: Autonomous Security Mesh (v3)
+
+SARTA introduces a shift from fragmented tooling to a unified **Autonomous Security Mesh**:
+
+### 🔄 Continuous Security Loop
+
+```mermaid
+flowchart LR
+
+%% =========================
+%% CORE LOOP
+%% =========================
+
+A[Runtime Telemetry<br/>Kernel + Workload Signals] --> 
+B[Risk Engine<br/>Behavioral + Threat Scoring]
+
+B --> 
+C[Policy Decision Layer<br/>Policy-as-Code Evaluation]
+
+C --> 
+D[Autonomous Response Engine<br/>Mitigation & Containment]
+
+D --> 
+E[Identity & Trust Re-evaluation<br/>Continuous Verification]
+
+E --> 
+F[Federated Intelligence Sharing<br/>Cross-Domain Threat Learning]
+
+F --> 
+B
+
+%% =========================
+%% VISUAL STYLING
+%% =========================
+
+classDef telemetry fill:#1e88e5,color:#ffffff,stroke:#90caf9,stroke-width:1px;
+classDef risk fill:#6a1b9a,color:#ffffff,stroke:#ce93d8,stroke-width:1px;
+classDef policy fill:#2e7d32,color:#ffffff,stroke:#a5d6a7,stroke-width:1px;
+classDef response fill:#d32f2f,color:#ffffff,stroke:#ef9a9a,stroke-width:1px;
+classDef identity fill:#00897b,color:#ffffff,stroke:#80cbc4,stroke-width:1px;
+classDef federation fill:#1565c0,color:#ffffff,stroke:#64b5f6,stroke-width:1px;
+
+class A telemetry;
+class B risk;
+class C policy;
+class D response;
+class E identity;
+class F federation;
+
+%% =========================
+%% FLOW EMPHASIS
+%% =========================
+
+linkStyle default stroke:#90a4ae,stroke-width:2px;
+```
+
+---
+
+## ⚙️ Key Capabilities
+
+### 👁️ Runtime Intelligence
+
+* Kernel-level telemetry
+* Behavioral anomaly detection
+* Container activity monitoring
+* Live attack surface mapping
+
+### 🧠 1. Runtime Intelligence Layer (Sensing & Perception)
+
+```mermaid id="runtime-intel"
+flowchart TB
+
+subgraph RI["👁️ Runtime Intelligence Layer"]
+direction TB
+
+A[Kernel-Level Telemetry] --> D[Telemetry Fusion Engine]
+B[Behavioral Anomaly Detection] --> D
+C[Container Activity Monitoring] --> D
+E[Live Attack Surface Mapping] --> D
+
+D --> F[Runtime Visibility Graph]
+F --> G[Security Event Stream]
+F --> H[Behavioral Baseline Model]
+
+end
+
+style RI fill:#0b1f3a,stroke:#4fc3f7,stroke-width:2px,color:#ffffff
+style A fill:#1e88e5,color:#fff
+style B fill:#43a047,color:#fff
+style C fill:#fb8c00,color:#fff
+style E fill:#8e24aa,color:#fff
+style D fill:#263238,color:#fff
+style F fill:#1565c0,color:#fff
+style G fill:#00acc1,color:#fff
+style H fill:#7e57c2,color:#fff
+```
+
+---
+
+### 🔐 Zero Trust Enforcement
+
+* Continuous workload identity validation
+* Mutual authentication
+* Policy-driven authorization
+* Real-time trust scoring
+
+### 🛡️ 2. Zero Trust Enforcement Layer (Continuous Verification)
+
+```mermaid id="zero-trust"
+flowchart TB
+
+subgraph ZT["Zero Trust Enforcement Layer"]
+direction TB
+
+A[Workload Identity Validation] --> D[Trust Evaluation Engine]
+B[Mutual Authentication] --> D
+C[Policy-driven Authorization] --> D
+E[Real-time Trust Scoring] --> D
+
+D --> F[Policy Decision Point]
+F --> G[Allow / Deny Decision]
+F --> H[Dynamic Access Adjustment]
+
+G --> I[Secure Workload Execution]
+H --> J[Trust Score Update Loop]
+
+end
+
+style ZT fill:#0a1b12,stroke:#00e676,stroke-width:2px,color:#ffffff
+style A fill:#2e7d32,color:#ffffff
+style B fill:#43a047,color:#ffffff
+style C fill:#66bb6a,color:#000000
+style E fill:#81c784,color:#000000
+style D fill:#1b5e20,color:#ffffff
+style F fill:#00c853,color:#000000
+style G fill:#00e676,color:#000000
+style H fill:#a5d6a7,color:#000000
+style I fill:#004d40,color:#ffffff
+style J fill:#1de9b6,color:#000000
+```
+
+---
+
+### ⚡ Autonomous Response
+
+* Namespace isolation
+* Pod termination
+* Traffic throttling
+* Node quarantine
+* Dynamic policy updates
+
+### ⚡ 3. Autonomous Response System (Digital Reflex Layer)
+
+```mermaid id="autonomous-response"
+flowchart TB
+
+subgraph AR["⚡ Autonomous Response Engine"]
+direction TB
+
+A[Threat Signal Input] --> B[Decision Engine]
+B --> C[Risk Classification Model]
+
+C --> D{Severity Level}
+
+D -->|Low| E[Traffic Throttling]
+D -->|Medium| F[Namespace Isolation]
+D -->|High| G[Pod Termination]
+D -->|Critical| H[Node Quarantine]
+
+E --> I[Policy Update Engine]
+F --> I
+G --> I
+H --> I
+
+I --> J[Policy Recompilation]
+J --> K[Runtime Enforcement Update]
+
+end
+
+style AR fill:#1a0f2e,stroke:#ba68c8,stroke-width:2px,color:#ffffff
+style A fill:#7e57c2,color:#fff
+style B fill:#512da8,color:#fff
+style C fill:#673ab7,color:#fff
+style D fill:#311b92,color:#fff
+style E fill:#9575cd,color:#000
+style F fill:#ba68c8,color:#000
+style G fill:#d81b60,color:#fff
+style H fill:#b71c1c,color:#fff
+style I fill:#4527a0,color:#fff
+style J fill:#6a1b9a,color:#fff
+style K fill:#8e24aa,color:#fff
+```
+
+---
+
+### 🌍 Sovereign Federation
+
+* Cross-domain intelligence sharing
+* Regional policy autonomy
+* Data locality enforcement
+* Federated trust propagation
+
+### 🌍 4. Sovereign Federation Layer (Distributed Trust System)
+
+```mermaid id="sovereign-federation"
+flowchart LR
+
+subgraph SF["🌍 Sovereign Federation Layer"]
+direction LR
+
+A[Region A Security Domain] <--> D[Federated Trust Exchange Bus] <--> B[Region B Security Domain]
+D <--> C[Region C Security Domain]
+
+A --> E[Local Policy Authority A]
+B --> F[Local Policy Authority B]
+C --> G[Local Policy Authority C]
+
+E --> D
+F --> D
+G --> D
+
+D --> H[Threat Intelligence Graph]
+H --> I[Federated Risk Correlation Engine]
+
+I --> J[Global Trust Consensus Model]
+
+end
+
+style SF fill:#0b1020,stroke:#42a5f5,stroke-width:2px,color:#ffffff
+style A fill:#1e88e5,color:#fff
+style B fill:#00acc1,color:#fff
+style C fill:#5c6bc0,color:#fff
+style D fill:#263238,color:#fff
+style E fill:#43a047,color:#fff
+style F fill:#fb8c00,color:#fff
+style G fill:#8e24aa,color:#fff
+style H fill:#1565c0,color:#fff
+style I fill:#7e57c2,color:#fff
+style J fill:#00e5ff,color:#000
+```
+
+---
+
+## 🧬 Executive Summary
 
 SARTA operationalizes:
 
 * AI-assisted security governance
 * Runtime Zero Trust enforcement
 * Sovereign multi-cloud control planes
-* Autonomous threat response
-* Policy-as-code enforcement
-* Continuous compliance engineering
 * Federated threat intelligence
-* Identity-centric trust verification
-
-Key enabling technologies include:
-
-* Kubernetes
-* eBPF
-* Falco
-* SPIFFE / SPIRE
-* OPA / Gatekeeper
-* OpenTelemetry
-* Federated threat intelligence graphs
+* Autonomous incident response
+* Policy-as-code enforcement
+* Continuous compliance verification
+* Digital sovereignty controls
 
 ---
 
-# Why SARTA Exists
+### ✨ Master Architecture View (All Layers Combined)
 
-Modern enterprise security is fragmented across:
+```mermaid id="sarta-master"
+flowchart TB
 
-* SIEM platforms
+RI[👁️ Runtime Intelligence]
+ZT[🔐 Zero Trust Enforcement]
+AR[⚡ Autonomous Response]
+SF[🌍 Sovereign Federation]
+
+RI --> ZT
+ZT --> AR
+AR --> RI
+
+SF <--> ZT
+SF <--> RI
+
+AR --> SF
+
+style RI fill:#1e88e5,stroke:#4fc3f7,color:#fff
+style ZT fill:#2e7d32,stroke:#00e676,color:#fff
+style AR fill:#6a1b9a,stroke:#ba68c8,color:#fff
+style SF fill:#0d47a1,stroke:#42a5f5,color:#fff
+```
+
+---
+
+## ❓ Why SARTA Exists
+
+Modern security ecosystems are fragmented across:
+
+* SIEM systems
+* Identity providers
 * Runtime security tools
-* Identity systems
-* Compliance platforms
-* Cloud governance frameworks
-* Incident response processes
+* Compliance frameworks
+* Incident response workflows
 
-This fragmentation produces:
+### ⚠️ Resulting Problems
 
 * Delayed detection
-* Slow remediation
-* Manual compliance evidence collection
-* Policy drift
-* Inconsistent trust enforcement
+* Slow response cycles
+* Policy inconsistency
+* High operational overhead
+* Fragmented visibility
 
-SARTA proposes a unified autonomous architecture capable of continuously detecting, reasoning about, and responding to security events while simultaneously generating compliance evidence and enforcing sovereign governance controls.
-
----
-
-# Research Positioning
-
-SARTA intersects several domains:
-
-* Sovereign Cloud Computing
-* Distributed Systems Security
-* AI Governance Systems
-* Operational Resilience Engineering
-* Zero Trust Architecture
-* Continuous Compliance Automation
-* Federated Trust Systems
+SARTA explores whether these can be unified into a **single adaptive computational system**.
 
 ---
 
-# Core Research Thesis
+## 🧪 Research Motivation
 
-Security systems should evolve from static rule engines into autonomous digital immune systems capable of:
+Modern infrastructure spans:
+
+* Multi-cloud environments
+* Sovereign jurisdictions
+* Distributed trust boundaries
+
+Traditional security models remain static and human-driven.
+
+SARTA investigates:
+
+> Can security become a **self-regulating computational organism**?
+
+---
+
+## 🔬 Research Questions
+
+* Can Zero Trust adapt continuously using runtime learning?
+* Can compliance become executable code instead of documentation?
+* Can sovereign systems share intelligence without losing autonomy?
+* What governance is required for AI-driven security decisions?
+* Can resilience be continuously verified at runtime?
+
+---
+
+## 🧭 Core Thesis
+
+Security systems should evolve into **digital immune systems**:
 
 * Continuous sensing
-* Contextual reasoning
+* Context-aware reasoning
 * Autonomous response
-* Policy adaptation
-* Federated learning
+* Policy evolution
+* Federated intelligence
 * Self-healing behavior
 
-Security becomes a computational process rather than a collection of disconnected controls.
+---
+
+## 🧱 Design Principles
+
+* Identity before network trust
+* Runtime visibility over assumptions
+* Policy as executable logic
+* Autonomous response by default
+* Human oversight always available
+* Sovereignty preserved across domains
+* Continuous verification over audits
+* Compliance as a runtime property
 
 ---
 
-# Design Principles
+## 🏗️ System Architecture (v3 Autonomous Mesh)
 
-1. Identity Before Network Trust
-2. Runtime Visibility Before Assumption
-3. Policy as Executable Code
-4. Autonomous Response by Default
-5. Human Oversight Always Available
-6. Sovereignty Preserved Across Domains
-7. Continuous Verification Over Periodic Audit
-8. Compliance as a Runtime Property
+### 🧩 Layered Model
 
----
-
-# System Architecture (v3 Autonomous Mesh)
-
-```mermaid
-flowchart TB
-  subgraph L0 🌍 Runtime Layer
-    A[Kubernetes Workloads]
-    B[eBPF Kernel Sensors]
-    C[Falco Detection Engine]
-  end
-
-  subgraph L1 🧠 Decision Layer
-    D[Risk Scoring Engine]
-    E[Attack Classification AI]
-    F[Policy Reasoning Engine]
-  end
-
-  subgraph L2 ⚡ Autonomous Response Layer
-    G[Isolation Controller]
-    H[Pod Remediation Engine]
-    I[Node Kill Switch]
-  end
-
-  subgraph L3 🛡 Policy Layer
-    J[OPA / Gatekeeper]
-    K[Dynamic Policy Mutation]
-  end
-
-  subgraph L4 🔐 Identity Layer
-    L[SPIFFE / SPIRE Workload Identity]
-  end
-
-  subgraph L5 🌐 Sovereign Federation Layer
-    M[Global Threat Graph]
-    N[Cross-Cluster Event Bus]
-  end
-
-  L0 --> L1
-  L1 --> L2
-  L2 --> L3
-  L3 --> L0
-  L4 --> L1
-  L5 --> L1
-```
-
-**Figure:** Runtime sensing feeds the decision layer, which drives autonomous responses and policy mutation. Identity and sovereign federation provide trust and telemetry.
+* Identity Layer
+* Policy Engine
+* Runtime Security Layer
+* Autonomy Engine
+* Threat Graph
+* Observability Layer
+* Federation Layer
 
 ---
 
-# Autonomous Security Loop
+## 🧠 Technology Stack
 
-```mermaid
-sequenceDiagram
-  participant eBPF
-  participant Falco
-  participant RiskEngine
-  participant DecisionEngine
-  participant ResponseEngine
-  participant PolicyEngine
-  participant SPIFFE
-  participant ThreatGraph
-
-  eBPF->>Falco: syscall anomaly event
-  Falco->>RiskEngine: correlated behavior
-  RiskEngine->>DecisionEngine: threat score + context
-  DecisionEngine->>ResponseEngine: remediation order
-  ResponseEngine->>PolicyEngine: remediation outcome
-  PolicyEngine->>SPIFFE: re-evaluate trust bindings
-  SPIFFE->>ThreatGraph: identity assertion
-  ThreatGraph->>DecisionEngine: updated learning data
-```
-
-**Security Lifecycle**
-
-Detect → Correlate → Score → Decide → Remediate → Learn → Adapt
+| Layer         | Technologies                        |
+| ------------- | ----------------------------------- |
+| Runtime       | Kubernetes, eBPF, Falco             |
+| Identity      | SPIFFE, SPIRE                       |
+| Policy        | Open Policy Agent (OPA), Gatekeeper |
+| Observability | OpenTelemetry, Prometheus           |
+| Intelligence  | AI Risk Scoring Engine              |
+| Compliance    | Continuous Verification System      |
 
 ---
 
-# Technology Stack
+## 🧪 Threat Model
 
-| Layer         | Technologies                             |
-| ------------- | ---------------------------------------- |
-| Runtime       | Kubernetes, eBPF, Falco                  |
-| Identity      | SPIFFE, SPIRE                            |
-| Policy        | OPA, Gatekeeper                          |
-| Federation    | Multi-Cluster Event Bus                  |
-| Observability | OpenTelemetry, Prometheus                |
-| Analytics     | Risk Engine                              |
-| AI Layer      | Attack Classification & Policy Reasoning |
-| Compliance    | Continuous Control Validation            |
+### ✅ Defended Against
 
----
-
-# Core Capabilities
-
-## Runtime Security
-
-* Kernel-level telemetry
-* Behavioral anomaly detection
-* Workload activity monitoring
-* Container escape detection
-
-## Zero Trust Enforcement
-
-* Workload identity verification
-* Mutual TLS enforcement
-* Continuous trust validation
-* Microsegmentation policies
-
-## Autonomous Response
-
-* Namespace isolation
-* Pod termination
-* Traffic throttling
-* Node cordoning
-* Policy mutation
-
-## Sovereign Federation
-
-* Cross-cluster intelligence sharing
-* Regional governance controls
-* Data locality enforcement
-* Distributed trust propagation
-
-## Continuous Compliance
-
-* Automated evidence generation
-* Control validation
-* Policy compliance monitoring
-* Audit trail creation
-
----
-
-# Threat Model
-
-## Protected Against
-
-* Container escape attempts
 * Privilege escalation
+* Credential misuse
 * Lateral movement
-* Credential theft
+* Supply chain compromise
 * Policy drift
-* Insider misuse
-* Supply-chain compromise
-* Unauthorized workload deployment
+* Insider threats
 
-## Partially Addressed
+### ⚠️ Partially Addressed
 
 * Advanced persistent threats
 * Multi-stage intrusion campaigns
 * Federated trust abuse
 
-## Out of Scope
+### 🚫 Out of Scope
 
-* Physical infrastructure compromise
 * Hardware implants
-* Nation-state firmware attacks
-* Air-gapped operational environments
+* Firmware-level attacks
+* Physical infrastructure compromise
 
 ---
 
-# Security Assumptions
+## 🤖 AI Governance Model
 
-SARTA assumes:
+### Allowed Actions
 
-* Trusted Kubernetes control plane
-* Protected workload identity roots
-* Operational eBPF instrumentation
-* Secure policy distribution channels
-* Trusted federation members
+* Risk scoring
+* Threat classification
+* Remediation suggestions
+* Policy recommendations
 
-Compromise of these assumptions requires additional compensating controls.
+### Forbidden Actions
 
----
+* Overriding trust roots
+* Disabling security controls
+* Bypassing policy enforcement
+* Autonomous identity modification
 
-# AI Governance
-
-AI systems within SARTA may:
-
-* Generate risk scores
-* Classify attack behavior
-* Recommend remediation actions
-* Suggest policy modifications
-
-AI systems may not:
-
-* Override root trust authorities
-* Disable security controls
-* Bypass policy validation
-* Alter identity infrastructure without approval
-
-All AI-generated actions are subject to policy-engine validation.
+> All AI actions remain **policy-bound and human-governed**.
 
 ---
 
-# Digital Immune System Model
+## 🧬 Digital Immune System Model
 
 | Biological System | SARTA Equivalent |
 | ----------------- | ---------------- |
-| White Blood Cells | Falco Sensors    |
-| Brain             | Risk Engine      |
-| Antibodies        | Policies         |
-| Reflex System     | Response Engine  |
-| Memory            | Threat Graph     |
+| White blood cells | Runtime sensors  |
+| Brain             | Risk engine      |
+| Antibodies        | Policy system    |
+| Reflex system     | Response engine  |
+| Immune memory     | Threat graph     |
 
 ---
 
-# Repository Structure
+## 📁 Repository Structure
 
-```text
+```bash
 sarta/
+├── README.md
+├── LICENSE
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── ROADMAP.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── threat-model.md
+│   ├── compliance-mapping.md
+│   ├── research-roadmap.md
+│   ├── publications/
+│   ├── diagrams/
+│   └── adr/
+│
 ├── control-plane/
 ├── runtime-security/
 ├── identity-layer/
 ├── policy-engine/
 ├── autonomy-engine/
 ├── threat-graph/
-├── observability/
 ├── federation/
-├── docs/
-│   └── adr/
+├── observability/
 └── tests/
 ```
 
-Each subsystem should contain:
+---
 
-```text
-README.md
-diagrams/
-manifests/
-tests/
-```
+## 📊 Compliance Alignment
+
+Aligned with:
+
+* NIST SP 800-207 (Zero Trust Architecture)
+* ISO 27001 Security Controls
+* GDPR (EU data protection framework)
+* DORA (Digital Operational Resilience Act)
+* NIS2 Directive
+* PCI DSS
 
 ---
 
-# Compliance Alignment
+## 📈 Key Metrics
 
-| Framework  | Alignment                          |
-| ---------- | ---------------------------------- |
-| DORA       | Operational resilience controls    |
-| NIS2       | Incident management and resilience |
-| GDPR       | Data locality and auditability     |
-| ISO 27001  | Runtime control enforcement        |
-| PCI DSS    | Continuous policy validation       |
-| Zero Trust | Continuous verification            |
-
----
-
-# Key Metrics
-
-* Mean Time To Detect (MTTD)
-* Mean Time To Respond (MTTR)
+* Mean Time to Detect (MTTD)
+* Mean Time to Respond (MTTR)
+* Policy Drift Rate
 * False Positive Rate
 * Compliance Coverage
-* Policy Drift Rate
 * Federation Latency
 * Identity Verification Success Rate
 
 ---
 
-# Example Attack Response Scenario
+## ⚔️ Example Attack Response Flow
 
-1. Malicious workload executes unauthorized shell.
-2. eBPF captures syscall anomaly.
-3. Falco correlates suspicious activity.
-4. Risk Engine generates threat score.
-5. Decision Engine classifies attack pattern.
-6. Response Engine isolates namespace.
-7. SPIFFE trust bindings are reevaluated.
-8. Threat Graph propagates intelligence.
-9. Updated policies are distributed globally.
+```text
+1. Malicious workload executes
+2. Runtime telemetry detects anomaly
+3. Risk engine evaluates behavior
+4. Policy engine classifies threat
+5. Response engine isolates workload
+6. Identity trust is recalculated
+7. Federation shares intelligence
+8. Policies are updated automatically
+```
 
 ---
 
-# Architecture Decision Records
+## 🧭 Architecture Decision Records (ADR)
 
-Architecture decisions are maintained in:
+Stored in:
 
-```text
+```bash
 docs/adr/
 ```
 
@@ -442,122 +590,75 @@ Each ADR documents:
 
 ---
 
-# Reproducing the Demo
+## 🔬 Research Contributions
 
-Prerequisites:
+* Autonomous Security Control Model
+* Federated Sovereign Trust Framework
+* Continuous Compliance Architecture
+* AI Governance for Security Operations
+* Digital Immune System Paradigm
+
+---
+
+## 🗺️ Research Roadmap
+
+* Phase 1 — Reference Architecture
+* Phase 2 — Prototype Validation
+* Phase 3 — Adaptive Policy Systems
+* Phase 4 — Sovereign Federation Experiments
+* Phase 5 — AI Governance Validation
+* Phase 6 — Large-Scale Operational Testing
+
+---
+
+## 🚀 Reproducing the System
+
+### Requirements
 
 * Kubernetes v1.25+
-* OPA Gatekeeper
-* SPIRE
+* Linux kernel 5.x+ with eBPF support
+* Open Policy Agent
 * Falco
-* Linux Kernel 5.x+
-* eBPF support
+* SPIRE
 
-Deployment:
+### Deployment
 
 ```bash
 kubectl apply -f control-plane/manifests/
 kubectl apply -f identity-layer/manifests/
-
 helm install falco runtime-security/helm/falco
-
 kubectl apply -f autonomy-engine/manifests/
-
 make demo-run
 ```
 
-Demo harness:
-
-```text
-autonomy-engine/demo/
-observability/e2e/
-```
-
 ---
 
-# Contribution & Governance
+## 🤝 Contribution & Governance
 
-* CLA or DCO required
 * Trunk-based development
-* Policy-change review gates
-* Security-first code review
+* Security-first review process
+* Policy change approval workflow
+* Architecture review gates
 * Severity-based issue triage
-* Monthly security releases
-* Quarterly architecture reviews
 
 ---
 
-# Roadmap
+## 📚 Publications
 
-## v3
+All research papers and drafts:
 
-* Autonomous response workflows
-* Federated threat intelligence
-* Dynamic policy mutation
-
-## v4
-
-* Adaptive policy optimization
-* Multi-region sovereignty controls
-* Advanced risk reasoning
-
-## v5
-
-* Autonomous compliance attestation
-* Cross-domain federation
-* Self-healing infrastructure orchestration
-
----
-
-# Accessibility & Publication Notes
-
-* Mermaid source maintained alongside SVG exports
-* Accessible color palette
-* Contrast ratio ≥ 4.5:1
-* Alt text for all diagrams
-* PDF export support
-
-Recommended publication flow:
-
-```text
-README → HTML → PDF
+```bash
+docs/publications/
 ```
 
 ---
 
-# Style Guide
-
-## Palette
-
-Primary Teal: #0F766E
-
-Accent Indigo: #3730A3
-
-Alert Coral: #F97316
-
-Neutral Slate: #334155
-
----
-
-# References
-
-* NIST SP 800-207 Zero Trust Architecture
-* SPIFFE Specification
-* SPIRE Documentation
-* Falco Runtime Security Documentation
-* Open Policy Agent Documentation
-* DORA Regulation
-* NIS2 Directive
-* ISO 27001
-* GDPR
-
----
-
-# Citation
+## 🧾 Citation
 
 ```bibtex
 @misc{sarta2026,
-  title={Sovereign Adaptive Resilience and Trust Architecture (SARTA)},
+  title={Sovereign Adaptive Resilience and Trust Architecture},
+  author={Mr. Mehlek Dawveed},
   year={2026},
   version={v3}
 }
@@ -565,14 +666,12 @@ Neutral Slate: #334155
 
 ---
 
-# License
+## 📜 License
 
-Licensed under Apache License 2.0.
+Licensed under the **Apache License 2.0**
 
-See LICENSE for details.
+---
 
 
-*   **Principal Investigator:** Mr. Mehlek Dawveed, MSc.
-*   **Contact Email:** [mehlekd@gmail.com](mailto:mehlekd@gmail.com)
-*   **Professional Matrix:** [LinkedIn Portfolio](https://linkedin.com)
-*   **Current Alignment Focus:** Open to Collaborative Research Programs, Funded PhD Positions, and EU Horizon Europe / NATO SPS Project Integration within the UK, Ireland, Netherlands, and wider EU ecosystems.
+
+
