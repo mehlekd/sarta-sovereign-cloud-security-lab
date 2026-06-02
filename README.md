@@ -431,18 +431,164 @@ Security systems should evolve into **digital immune systems**:
 
 ---
 
-## 🧠 Technology Stack
+# 🧠 Technology Stack
 
-| Layer         | Technologies                        |
-| ------------- | ----------------------------------- |
-| Runtime       | Kubernetes, eBPF, Falco             |
-| Identity      | SPIFFE, SPIRE                       |
-| Policy        | Open Policy Agent (OPA), Gatekeeper |
-| Observability | OpenTelemetry, Prometheus           |
-| Intelligence  | AI Risk Scoring Engine              |
-| Compliance    | Continuous Verification System      |
+<div align="center">
+
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Zero Trust](https://img.shields.io/badge/Zero_Trust-Identity_First-009688?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-Risk_Intelligence-FF6F00?style=for-the-badge)
+![Compliance](https://img.shields.io/badge/Continuous_Compliance-Automated-7B1FA2?style=for-the-badge)
+
+</div>
 
 ---
+
+## 🏗️ Platform Architecture
+
+| 🏢 Layer | 🚀 Technologies | 🎯 Purpose |
+|----------|----------------|------------|
+| ⚙️ Runtime | Kubernetes • eBPF • Falco | Secure cloud-native workload execution |
+| 🔐 Identity | SPIFFE • SPIRE | Zero Trust workload identity |
+| 📜 Policy | Open Policy Agent (OPA) • Gatekeeper | Policy-as-Code & governance |
+| 📊 Observability | OpenTelemetry • Prometheus | Monitoring, telemetry & visibility |
+| 🤖 Intelligence | AI Risk Scoring Engine | Threat prediction & risk analysis |
+| 🛡️ Compliance | Continuous Verification System | Automated compliance assurance |
+
+---
+
+# 📐 Security Architecture
+
+<div align="center">
+
+![Cloud Native](https://img.shields.io/badge/Cloud_Native-Kubernetes-326CE5?style=for-the-badge\&logo=kubernetes\&logoColor=white)
+![Zero Trust](https://img.shields.io/badge/Zero_Trust-SPIFFE%20%7C%20SPIRE-AA00FF?style=for-the-badge)
+![Policy as Code](https://img.shields.io/badge/Policy_as_Code-OPA-00C853?style=for-the-badge)
+![Observability](https://img.shields.io/badge/Observability-OpenTelemetry-00B8D4?style=for-the-badge)
+![AI Security](https://img.shields.io/badge/AI-Risk_Engine-FF6D00?style=for-the-badge)
+![Compliance](https://img.shields.io/badge/Continuous_Compliance-Enabled-FFD600?style=for-the-badge)
+
+</div>
+
+---
+
+## 🏗️ Layered Security Platform
+
+```mermaid
+flowchart TB
+
+    A["⚙️ Runtime Layer<br/><br/>☸️ Kubernetes<br/>🔍 eBPF<br/>🦅 Falco"]
+
+    B["🔐 Identity Layer<br/><br/>🆔 SPIFFE<br/>🎫 SPIRE"]
+
+    C["📜 Policy Layer<br/><br/>⚖️ Open Policy Agent<br/>🛡️ Gatekeeper"]
+
+    D["📊 Observability Layer<br/><br/>📈 OpenTelemetry<br/>📡 Prometheus"]
+
+    E["🤖 Intelligence Layer<br/><br/>🧠 AI Risk Engine"]
+
+    F["🛡️ Compliance Layer<br/><br/>✅ Continuous Verification"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+
+    style A fill:#2962FF,color:#ffffff,stroke:#82B1FF,stroke-width:4px
+    style B fill:#AA00FF,color:#ffffff,stroke:#EA80FC,stroke-width:4px
+    style C fill:#00C853,color:#ffffff,stroke:#69F0AE,stroke-width:4px
+    style D fill:#00B8D4,color:#ffffff,stroke:#84FFFF,stroke-width:4px
+    style E fill:#FF6D00,color:#ffffff,stroke:#FFAB40,stroke-width:4px
+    style F fill:#FFD600,color:#000000,stroke:#FFFF8D,stroke-width:4px
+```
+
+---
+
+## 🌈 Capability Flow
+
+```text
+⚙️ Runtime Security
+        │
+        ▼
+🔐 Zero Trust Identity
+        │
+        ▼
+📜 Policy Enforcement
+        │
+        ▼
+📊 Telemetry & Visibility
+        │
+        ▼
+🤖 AI Risk Intelligence
+        │
+        ▼
+🛡️ Continuous Compliance
+```
+
+---
+
+## 🎯 Security Capability Matrix
+
+| Layer            | Mission                   | Status    |
+| ---------------- | ------------------------- | --------- |
+| ⚙️ Runtime       | Workload Protection       | 🟢 Active |
+| 🔐 Identity      | Zero Trust Authentication | 🟢 Active |
+| 📜 Policy        | Governance & Enforcement  | 🟢 Active |
+| 📊 Observability | Telemetry & Monitoring    | 🟢 Active |
+| 🤖 Intelligence  | AI Risk Analysis          | 🟢 Active |
+| 🛡️ Compliance   | Continuous Assurance      | 🟢 Active |
+
+---
+
+## 🚀 Security Operating Model
+
+```mermaid
+flowchart LR
+
+R["⚙️ Runtime"]
+I["🔐 Identity"]
+P["📜 Policy"]
+O["📊 Observe"]
+A["🤖 Analyze"]
+C["🛡️ Comply"]
+
+R --> I
+I --> P
+P --> O
+O --> A
+A --> C
+
+style R fill:#2962FF,color:#fff
+style I fill:#AA00FF,color:#fff
+style P fill:#00C853,color:#fff
+style O fill:#00B8D4,color:#fff
+style A fill:#FF6D00,color:#fff
+style C fill:#FFD600,color:#000
+```
+
+> [!IMPORTANT]
+> This architecture implements a **Zero Trust, AI-Driven Digital Immune System** where every workload is authenticated, every action is authorized, every event is observed, every risk is analyzed, and every control is continuously verified for compliance.
+
+---
+
+## 🎯 Capability Mapping
+
+| Capability | Status |
+|------------|---------|
+| 🔐 Zero Trust Identity | 🟢 Enabled |
+| ☁️ Cloud Native Security | 🟢 Enabled |
+| 📜 Policy as Code | 🟢 Enabled |
+| 📊 Real-Time Monitoring | 🟢 Enabled |
+| 🤖 AI-Powered Risk Analysis | 🟢 Enabled |
+| 🛡️ Continuous Compliance | 🟢 Enabled |
+| 🚨 Threat Detection | 🟢 Enabled |
+| 🔍 Audit Readiness | 🟢 Enabled |
+
+---
+
+> [!TIP]
+> This architecture combines **Zero Trust**, **Cloud Native Security**, **Policy-as-Code**, **Observability**, **AI-Driven Risk Analytics**, and **Continuous Compliance** into a unified security platform.
 
 ## 🧪 Threat Model
 
@@ -489,15 +635,126 @@ Security systems should evolve into **digital immune systems**:
 
 ---
 
-## 🧬 Digital Immune System Model
+# 🧬 Digital Immune System Model
 
-| Biological System | SARTA Equivalent |
-| ----------------- | ---------------- |
-| White blood cells | Runtime sensors  |
-| Brain             | Risk engine      |
-| Antibodies        | Policy system    |
-| Reflex system     | Response engine  |
-| Immune memory     | Threat graph     |
+<div align="center">
+
+![Autonomous Defense](https://img.shields.io/badge/Autonomous_Defense-Enabled-00C853?style=for-the-badge)
+![AI Driven](https://img.shields.io/badge/AI_Driven-Protection-2962FF?style=for-the-badge)
+![Zero Trust](https://img.shields.io/badge/Zero_Trust-Enforced-AA00FF?style=for-the-badge)
+![Continuous Monitoring](https://img.shields.io/badge/Continuous-Monitoring-FF6D00?style=for-the-badge)
+
+</div>
+
+---
+
+## 🌐 Biological-to-Digital Mapping
+
+| 🧬 Biological System | 🛡️ SARTA Equivalent   | 🎯 Function                                      |
+| -------------------- | ---------------------- | ------------------------------------------------ |
+| ⚪ White Blood Cells  | Runtime Sensors        | Detect threats and anomalies in real time        |
+| 🧠 Brain             | AI Risk Engine         | Analyze, correlate, and prioritize risks         |
+| 🧪 Antibodies        | Policy System          | Prevent and neutralize malicious actions         |
+| ⚡ Reflex System      | Response Engine        | Execute automated containment and remediation    |
+| 🧠💾 Immune Memory   | Threat Knowledge Graph | Learn from previous attacks and improve defenses |
+
+---
+
+## 🧬 Digital Immune Response Cycle
+
+```mermaid
+flowchart LR
+
+A["⚪ Runtime Sensors<br/>White Blood Cells"]
+
+B["🧠 AI Risk Engine<br/>Brain"]
+
+C["🧪 Policy System<br/>Antibodies"]
+
+D["⚡ Response Engine<br/>Reflex System"]
+
+E["🧠💾 Threat Knowledge Graph<br/>Immune Memory"]
+
+A --> B
+B --> C
+C --> D
+D --> E
+E -. Continuous Learning .-> B
+
+style A fill:#00E5FF,color:#000000,stroke:#84FFFF,stroke-width:3px
+style B fill:#2979FF,color:#ffffff,stroke:#82B1FF,stroke-width:3px
+style C fill:#00C853,color:#ffffff,stroke:#69F0AE,stroke-width:3px
+style D fill:#FF6D00,color:#ffffff,stroke:#FFAB40,stroke-width:3px
+style E fill:#AA00FF,color:#ffffff,stroke:#EA80FC,stroke-width:3px
+```
+
+---
+
+## 🩺 Immune System Health Indicators
+
+| Capability               | Status    |
+| ------------------------ | --------- |
+| 🔍 Threat Detection      | 🟢 Active |
+| 🧠 Risk Intelligence     | 🟢 Active |
+| 🛡️ Policy Enforcement   | 🟢 Active |
+| ⚡ Automated Response     | 🟢 Active |
+| 📚 Threat Learning       | 🟢 Active |
+| 🔄 Continuous Adaptation | 🟢 Active |
+
+---
+
+## 🎨 Defense Maturity Overview
+
+```text
+⚪ Runtime Sensors          🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢
+🧠 AI Risk Engine          🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢
+🧪 Policy System           🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢
+⚡ Response Engine         🟢🟢🟢🟢🟢 🟢🟢🟢🟢⚪
+🧠💾 Threat Knowledge      🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢
+```
+
+---
+
+> [!TIP]
+> Just as the human immune system continuously detects, analyzes, responds, and learns from biological threats, the **SARTA Digital Immune System** continuously monitors workloads, evaluates risk, enforces policy, orchestrates automated responses, and builds institutional memory from every security event.
+
+## 🚀 Autonomous Cyber Defense Architecture
+
+```mermaid
+graph TD
+
+S["🔍 Detect"]
+A["⚪ Runtime Sensors"]
+
+R["🧠 Analyze"]
+B["🧠 AI Risk Engine"]
+
+P["🛡️ Protect"]
+C["🧪 Policy System"]
+
+X["⚡ Respond"]
+D["⚡ Response Engine"]
+
+L["📚 Learn"]
+E["🧠💾 Threat Knowledge Graph"]
+
+S --> A
+A --> R
+R --> B
+B --> P
+P --> C
+C --> X
+X --> D
+D --> L
+L --> E
+E --> S
+
+style S fill:#00E676,color:#000
+style R fill:#2979FF,color:#fff
+style P fill:#00C853,color:#fff
+style X fill:#FF6D00,color:#fff
+style L fill:#AA00FF,color:#fff
+```
 
 ---
 
@@ -533,18 +790,447 @@ sarta/
 
 ---
 
-## 📊 Compliance Alignment
+<div align="center">
 
-Aligned with:
+# 🌐 Global Cybersecurity Framework Alignment Matrix
 
-* NIST SP 800-207 (Zero Trust Architecture)
-* ISO 27001 Security Controls
-* GDPR (EU data protection framework)
-* DORA (Digital Operational Resilience Act)
-* NIS2 Directive
-* PCI DSS
+![Zero Trust](https://img.shields.io/badge/Zero_Trust-NIST_800--207-0A66C2?style=for-the-badge)
+![ISO 27001](https://img.shields.io/badge/ISO_27001-2022-009688?style=for-the-badge)
+![GDPR](https://img.shields.io/badge/GDPR-EU-003399?style=for-the-badge)
+![DORA](https://img.shields.io/badge/DORA-EU_Financial_Resilience-6A1B9A?style=for-the-badge)
+![NIS2](https://img.shields.io/badge/NIS2-Critical_Infrastructure-1565C0?style=for-the-badge)
+![PCI DSS](https://img.shields.io/badge/PCI_DSS-v4.0-D32F2F?style=for-the-badge)
+
+### 🛡️ Global Crosswalk of Cybersecurity, Privacy, Resilience, and Compliance Frameworks
+
+</div>
 
 ---
+
+## 📌 Alignment Legend
+
+| Rating | Meaning |
+|----------|----------|
+| 🟣 Very High | Directly aligned |
+| 🟢 High | Strong alignment |
+| 🟡 Medium | Partial alignment |
+| 🔴 Low | Limited alignment |
+
+---
+
+# 🇺🇸 United States
+
+---
+
+## 🔵 NIST Cybersecurity Framework (CSF) 2.0
+
+![Risk Management](https://img.shields.io/badge/Risk_Management-High-success)
+![Governance](https://img.shields.io/badge/Governance-High-success)
+
+### Alignment Matrix
+
+| Standard | Alignment |
+|-----------|------------|
+| NIST SP 800-207 | 🟢 High |
+| ISO 27001 | 🟢 High |
+| GDPR | 🟡 Medium |
+| DORA | 🟢 High |
+| NIS2 | 🟢 High |
+| PCI DSS | 🟡 Medium |
+
+### Key Areas
+
+- 🏛️ Governance
+- 🎯 Risk Management
+- 🔐 Identity & Access Management
+- 🚨 Incident Response
+- 🔗 Supply Chain Security
+- 📈 Continuous Monitoring
+
+---
+
+## 🔷 NIST SP 800-53 Rev.5
+
+> [!TIP]
+> Considered one of the most comprehensive security control catalogs globally.
+
+### Alignment Matrix
+
+| Standard | Alignment |
+|-----------|------------|
+| NIST SP 800-207 | 🟢 High |
+| ISO 27001 | 🟢 High |
+| GDPR | 🟢 High |
+| DORA | 🟢 High |
+| NIS2 | 🟢 High |
+| PCI DSS | 🟢 High |
+
+### Key Areas
+
+- 🔒 Access Control
+- 📝 Audit Logging
+- 🔑 Encryption
+- 👤 Privacy Controls
+- ♻️ Resilience & Recovery
+- 📡 Security Monitoring
+
+---
+
+## 🟦 CISA Zero Trust Maturity Model
+
+### Alignment Matrix
+
+| Standard | Alignment |
+|-----------|------------|
+| NIST SP 800-207 | 🟣 Very High |
+| ISO 27001 | 🟡 Medium |
+| GDPR | 🔴 Low |
+| DORA | 🟡 Medium |
+| NIS2 | 🟡 Medium |
+| PCI DSS | 🔴 Low |
+
+### Domains
+
+- 👤 Identity
+- 💻 Devices
+- 🌐 Networks
+- 📦 Applications
+- 📁 Data
+- 📊 Analytics
+- 🤖 Automation
+
+---
+
+## ☁️ FedRAMP
+
+### Focus
+
+- ☁️ Cloud Security
+- 📈 Continuous Monitoring
+- 🏛️ Authorization Management
+- 🎯 Risk Assessment
+
+---
+
+# 🇨🇦 Canada
+
+<details>
+<summary><b>🟥 ITSG-33</b></summary>
+
+### Alignment Matrix
+
+| Standard | Alignment |
+|-----------|------------|
+| NIST SP 800-207 | 🟢 High |
+| ISO 27001 | 🟢 High |
+| GDPR | 🟡 Medium |
+| DORA | 🟡 Medium |
+| NIS2 | 🟡 Medium |
+| PCI DSS | 🟡 Medium |
+
+### Focus Areas
+
+- 🔐 Security Controls
+- 🎯 Risk Management
+- 🔄 Continuous Authorization
+- 🏛️ Government Baselines
+
+</details>
+
+<details>
+<summary><b>🟥 Protected B Cloud Profile</b></summary>
+
+### Focus Areas
+
+- ☁️ Cloud Security
+- 🏛️ Government Workloads
+- 📂 Data Classification
+- 🔐 Secure Operations
+
+</details>
+
+<details>
+<summary><b>🟥 PIPEDA</b></summary>
+
+### Focus Areas
+
+- 👤 Privacy Management
+- 🔒 Data Protection
+- ✅ Consent Management
+- 🚨 Breach Notification
+
+</details>
+
+---
+
+# 🇪🇺 European Union
+
+## 🟦 EUCS
+
+![Cloud Security](https://img.shields.io/badge/Cloud_Assurance-High-blue)
+![Certification](https://img.shields.io/badge/Security_Certification-EU-success)
+
+### Focus Areas
+
+- ☁️ Cloud Assurance
+- 🏆 Security Certification
+- 🎯 Risk Management
+
+---
+
+## 🟨 eIDAS 2.0
+
+### Focus Areas
+
+- 🆔 Digital Identity
+- 🔑 Strong Authentication
+- 🤝 Trust Services
+
+---
+
+## 🟪 EBA ICT Guidelines
+
+> [!IMPORTANT]
+> One of the strongest operational resilience frameworks influencing DORA implementation.
+
+### Focus Areas
+
+- 📡 ICT Risk Management
+- 🔗 Outsourcing Risk
+- ♻️ Operational Resilience
+
+---
+
+## 🟦 ENISA Cybersecurity Guidance
+
+### Strengths
+
+| Area | Rating |
+|--------|---------|
+| NIS2 | 🟣 Very High |
+| DORA | 🟢 High |
+| ISO 27001 | 🟢 High |
+
+---
+
+# 🇬🇧 United Kingdom
+
+## 🔷 NCSC Cyber Assessment Framework (CAF)
+
+### Security Outcomes
+
+- 🎯 Risk Management
+- 🛡️ Asset Protection
+- 🔎 Detection
+- 🚨 Response
+- ♻️ Recovery
+
+---
+
+## 🟢 Cyber Essentials Plus
+
+### Core Controls
+
+- 🔑 Multi-Factor Authentication
+- 🔄 Patch Management
+- ⚙️ Secure Configuration
+- 🦠 Malware Protection
+
+---
+
+## 🔵 UK GDPR
+
+### Primary Focus
+
+- 👤 Data Privacy
+- 🔒 Personal Data Protection
+- 📜 Regulatory Compliance
+
+---
+
+# 🌍 Middle East
+
+## 🇦🇪 United Arab Emirates
+
+### 🌟 UAE Information Assurance Standards (IAS)
+
+<div align="center">
+
+![Governance](https://img.shields.io/badge/Governance-Excellent-00C853?style=for-the-badge)
+![Risk](https://img.shields.io/badge/Risk_Management-Excellent-00E676?style=for-the-badge)
+![Compliance](https://img.shields.io/badge/Compliance-Strong-FFD600?style=for-the-badge)
+![Operations](https://img.shields.io/badge/Operational_Security-Excellent-00B0FF?style=for-the-badge)
+
+</div>
+
+| Security Domain         | Maturity              |
+| ----------------------- | --------------------- |
+| 🟦 Security Governance  | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢 |
+| 🟪 Risk Management      | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢 |
+| 🟨 Compliance           | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢⚪  |
+| 🟥 Operational Security | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢 |
+
+---
+
+### UAE PDPL
+
+- 👤 Privacy Protection
+- 🔐 Data Governance
+- 🌐 Cross-Border Data Controls
+
+---
+
+## 🇸🇦 Saudi Arabia
+
+### Essential Cybersecurity Controls (ECC)
+
+![NCA](https://img.shields.io/badge/NCA-ECC-success)
+
+Key Areas:
+
+- 🔐 Cybersecurity Governance
+- 🎯 Risk Management
+- 🏢 Organizational Security
+- 📡 Operational Security
+
+---
+
+### Cloud Cybersecurity Controls (CCC)
+
+- ☁️ Cloud Security
+- 🔒 Data Protection
+- 🔑 Identity Management
+- 🛡️ Zero Trust Principles
+
+---
+
+# 🌏 Asia-Pacific
+
+## 🇸🇬 Singapore
+
+### Critical Information Infrastructure Code
+
+| Domain | Rating |
+|----------|----------|
+| DORA Alignment | 🟢 High |
+| NIS2 Alignment | 🟢 High |
+| ISO 27001 Alignment | 🟢 High |
+
+---
+
+## 🇯🇵 Japan
+
+### Cybersecurity Management Guidelines
+
+- 🏛️ Governance
+- 🎯 Risk Management
+- 🔐 Security Controls
+- 📈 Continuous Improvement
+
+---
+
+## 🇦🇺 Australia
+
+### 🚀 Essential Eight
+
+<div align="center">
+
+![Application Control](https://img.shields.io/badge/Application_Control-Mature-00E676?style=for-the-badge)
+![Patching](https://img.shields.io/badge/Patch_Management-Mature-00BFA5?style=for-the-badge)
+![MFA](https://img.shields.io/badge/MFA-Excellent-2979FF?style=for-the-badge)
+![Privileged Access](https://img.shields.io/badge/Privileged_Access-Strong-FFAB00?style=for-the-badge)
+![Backups](https://img.shields.io/badge/Backups-Excellent-00C853?style=for-the-badge)
+
+</div>
+
+| Security Control                | Maturity              |
+| ------------------------------- | --------------------- |
+| 🟦 Application Control          | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢 |
+| 🟪 Patch Applications           | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢 |
+| 🟨 Multi-Factor Authentication  | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢 |
+| 🟥 Privileged Access Management | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢⚪  |
+| 🟩 Backup & Recovery            | 🟢🟢🟢🟢🟢 🟢🟢🟢🟢🟢 |
+
+---
+
+# 📊 Global Alignment Summary
+
+| Framework | Zero Trust | ISO 27001 | GDPR | DORA | NIS2 | PCI DSS |
+|------------|------------|------------|------------|------------|------------|------------|
+| NIST CSF 2.0 | 🟢 | 🟢 | 🟡 | 🟢 | 🟢 | 🟡 |
+| NIST SP 800-53 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| CISA ZTMM | 🟣 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 |
+| ITSG-33 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 |
+| UK CAF | 🟡 | 🟢 | 🟡 | 🟢 | 🟢 | 🟡 |
+| Saudi ECC | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 |
+| UAE IAS | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 |
+| Singapore CII | 🟡 | 🟢 | 🟡 | 🟢 | 🟢 | 🔴 |
+| ACSC ISM | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 |
+| PCI DSS 4.0 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟣 |
+
+---
+
+# 🚀 Recommended Global Baseline Stack
+
+```mermaid
+flowchart TD
+
+    A["🔵 NIST CSF 2.0"]
+    B["🟣 NIST SP 800-53"]
+    C["🟢 ISO 27001"]
+    D["🟠 NIST SP 800-207"]
+    F["🟡 ISO 27701"]
+
+    E["🌐 Global Security Program"]
+
+    G["🇪🇺 GDPR"]
+    H["🏦 DORA"]
+    I["🛡️ NIS2"]
+    J["💳 PCI DSS"]
+
+    A --> E
+    B --> E
+    C --> E
+    D --> E
+    F --> E
+
+    E --> G
+    E --> H
+    E --> I
+    E --> J
+
+    style A fill:#2962FF,color:#ffffff,stroke:#82B1FF,stroke-width:3px
+    style B fill:#AA00FF,color:#ffffff,stroke:#EA80FC,stroke-width:3px
+    style C fill:#00C853,color:#ffffff,stroke:#69F0AE,stroke-width:3px
+    style D fill:#FF6D00,color:#ffffff,stroke:#FFAB40,stroke-width:3px
+    style F fill:#FFD600,color:#000000,stroke:#FFFF8D,stroke-width:3px
+
+    style E fill:#00B8D4,color:#ffffff,stroke:#84FFFF,stroke-width:5px
+
+    style G fill:#1565C0,color:#ffffff
+    style H fill:#6A1B9A,color:#ffffff
+    style I fill:#00897B,color:#ffffff
+    style J fill:#D32F2F,color:#ffffff
+```
+
+> [!SUCCESS]
+> 🛡️ **Global Security Program Foundation**
+>
+> 🔵 NIST CSF 2.0
+> 🟣 NIST SP 800-53
+> 🟢 ISO 27001
+> 🟡 ISO 27701
+> 🟠 NIST SP 800-207 (Zero Trust)
+>
+> Together, these frameworks provide comprehensive coverage for:
+>
+> * 🇪🇺 GDPR
+> * 🏦 DORA
+> * 🛡️ NIS2
+> * 💳 PCI DSS 4.0
+> * ☁️ Cloud Security
+> * 🔐 Zero Trust Architecture
+> * 🌍 Global Regulatory Compliance
 
 ## 📈 Key Metrics
 
