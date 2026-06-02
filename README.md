@@ -431,7 +431,7 @@ Security systems should evolve into **digital immune systems**:
 
 ---
 
-# 🧠 Technology Stack
+### 🧠 Technology Stack
 
 <div align="center">
 
@@ -444,7 +444,7 @@ Security systems should evolve into **digital immune systems**:
 
 ---
 
-## 🏗️ Platform Architecture
+### 🏗️ Platform Architecture
 
 | 🏢 Layer | 🚀 Technologies | 🎯 Purpose |
 |----------|----------------|------------|
@@ -457,7 +457,7 @@ Security systems should evolve into **digital immune systems**:
 
 ---
 
-# 📐 Security Architecture
+### 📐 Security Architecture
 
 <div align="center">
 
@@ -472,7 +472,7 @@ Security systems should evolve into **digital immune systems**:
 
 ---
 
-## 🏗️ Layered Security Platform
+### 🏗️ Layered Security Platform
 
 ```mermaid
 flowchart TB
@@ -505,7 +505,7 @@ flowchart TB
 
 ---
 
-## 🌈 Capability Flow
+### 🌈 Capability Flow
 
 ```text
 ⚙️ Runtime Security
@@ -528,7 +528,7 @@ flowchart TB
 
 ---
 
-## 🎯 Security Capability Matrix
+### 🎯 Security Capability Matrix
 
 | Layer            | Mission                   | Status    |
 | ---------------- | ------------------------- | --------- |
@@ -541,7 +541,7 @@ flowchart TB
 
 ---
 
-## 🚀 Security Operating Model
+### 🚀 Security Operating Model
 
 ```mermaid
 flowchart LR
@@ -572,7 +572,7 @@ style C fill:#FFD600,color:#000
 
 ---
 
-## 🎯 Capability Mapping
+### 🎯 Capability Mapping
 
 | Capability | Status |
 |------------|---------|
@@ -635,7 +635,7 @@ style C fill:#FFD600,color:#000
 
 ---
 
-# 🧬 Digital Immune System Model
+## 🧬 Digital Immune System Model
 
 <div align="center">
 
@@ -648,7 +648,7 @@ style C fill:#FFD600,color:#000
 
 ---
 
-## 🌐 Biological-to-Digital Mapping
+### 🌐 Biological-to-Digital Mapping
 
 | 🧬 Biological System | 🛡️ SARTA Equivalent   | 🎯 Function                                      |
 | -------------------- | ---------------------- | ------------------------------------------------ |
@@ -660,7 +660,7 @@ style C fill:#FFD600,color:#000
 
 ---
 
-## 🧬 Digital Immune Response Cycle
+### 🧬 Digital Immune Response Cycle
 
 ```mermaid
 flowchart LR
@@ -690,7 +690,7 @@ style E fill:#AA00FF,color:#ffffff,stroke:#EA80FC,stroke-width:3px
 
 ---
 
-## 🩺 Immune System Health Indicators
+### 🩺 Immune System Health Indicators
 
 | Capability               | Status    |
 | ------------------------ | --------- |
@@ -792,7 +792,7 @@ sarta/
 
 <div align="center">
 
-# 🌐 Global Cybersecurity Framework Alignment Matrix
+## 🌐 Global Cybersecurity Framework Alignment Matrix
 
 ![Zero Trust](https://img.shields.io/badge/Zero_Trust-NIST_800--207-0A66C2?style=for-the-badge)
 ![ISO 27001](https://img.shields.io/badge/ISO_27001-2022-009688?style=for-the-badge)
@@ -818,7 +818,7 @@ sarta/
 
 ---
 
-# 🇺🇸 United States
+## 🇺🇸 United States
 
 ---
 
@@ -912,7 +912,7 @@ sarta/
 
 ---
 
-# 🇨🇦 Canada
+## 🇨🇦 Canada
 
 <details>
 <summary><b>🟥 ITSG-33</b></summary>
@@ -963,7 +963,7 @@ sarta/
 
 ---
 
-# 🇪🇺 European Union
+## 🇪🇺 European Union
 
 ## 🟦 EUCS
 
@@ -1013,7 +1013,7 @@ sarta/
 
 ---
 
-# 🇬🇧 United Kingdom
+## 🇬🇧 United Kingdom
 
 ## 🔷 NCSC Cyber Assessment Framework (CAF)
 
@@ -1048,7 +1048,7 @@ sarta/
 
 ---
 
-# 🌍 Middle East
+## 🌍 Middle East
 
 ## 🇦🇪 United Arab Emirates
 
@@ -1104,7 +1104,7 @@ Key Areas:
 
 ---
 
-# 🌏 Asia-Pacific
+## 🌏 Asia-Pacific
 
 ## 🇸🇬 Singapore
 
@@ -1153,7 +1153,7 @@ Key Areas:
 
 ---
 
-# 📊 Global Alignment Summary
+## 📊 Global Alignment Summary
 
 | Framework | Zero Trust | ISO 27001 | GDPR | DORA | NIS2 | PCI DSS |
 |------------|------------|------------|------------|------------|------------|------------|
@@ -1170,7 +1170,7 @@ Key Areas:
 
 ---
 
-# 🚀 Recommended Global Baseline Stack
+## 🚀 Recommended Global Baseline Stack
 
 ```mermaid
 flowchart TD
