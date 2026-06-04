@@ -13,19 +13,19 @@
 
 **SARTA (Sovereign Adaptive Resilience & Trust Architecture)** is a research-grade reference architecture exploring how security, trust, compliance, operational resilience, and digital sovereignty can be implemented as **continuously adaptive computational systems**.
 
-SARTA reframes cybersecurity from a static control problem into a **living autonomous system** capable of sensing, reasoning, and responding in real time.
+**SARTA** reframes cybersecurity from a static control problem into a **living autonomous system** capable of sensing, reasoning, and responding in real time.
 
 ---
-## SARTA™
+### SARTA™
 Sovereign Adaptive Resilience & Trust Architecture
 
 👤 Created by Mr. Mehlek Dawveed
 
-Original Research and Architecture
+**Original Research and Architecture
 Copyright © 2026 Mehlek Dawveed
-All Rights Reserved
+(All Rights Reserved)**
 
-
+---
 
 ## 🎯 Core Objectives
 
@@ -1364,6 +1364,11 @@ Licensed under the **Apache License 2.0**
 
 ---
 
+### Academic and professional use is encouraged.
 
+When referencing this work, please cite:
+
+**Dawveed, M. (2026)
+Sovereign Adaptive Resilience & Trust Architecture (SARTA)**
 
 
