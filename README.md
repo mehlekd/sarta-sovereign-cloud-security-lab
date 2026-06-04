@@ -1372,7 +1372,9 @@ docs/publications/
 ### Detect → Verify → Govern → Observe → Analyze → Respond → Comply → Federate → Learn → Adapt
 ---
 
+
 ```mermaid
+
 graph TD
 
 %% ─────────────────────────────────────
@@ -1480,11 +1482,6 @@ Licensed under the **Apache License 2.0**
 
 ---
 
-### Academic and professional use is encouraged.
-
-When referencing this work, please cite:
-
-**Dawveed, M. (2026)
-Sovereign Adaptive Resilience & Trust Architecture (SARTA)**
+## Dawveed, M. (2026) Sovereign Adaptive Resilience & Trust Architecture (SARTA)
 
 
