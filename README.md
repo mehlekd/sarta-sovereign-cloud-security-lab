@@ -1370,7 +1370,7 @@ docs/publications/
 * 👨‍⚖️ Human Governance
 
 ### Detect → Verify → Govern → Observe → Analyze → Respond → Comply → Federate → Learn → Adapt
-
+---
 
 ```mermaid
 graph TD
