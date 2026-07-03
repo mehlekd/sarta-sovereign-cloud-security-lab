@@ -16,14 +16,174 @@
 **SARTA** reframes cybersecurity from a static control problem into a **living autonomous system** capable of sensing, reasoning, and responding in real time.
 
 ---
+
+## AI Security Trust Architecture (SARTA™ / AI-SABOK™)
+
+> **A reference architecture for designing, governing, and securing enterprise AI systems across their entire lifecycle—from governance and trust to secure AI design, foundation models, infrastructure, and continuous security operations.**
+
+---
+```mermaid
+flowchart TB
+
+%%==========================
+%% Title
+%%==========================
+
+TITLE["AI SECURITY TRUST ARCHITECTURE<br/>SARTA™ / AI-SABOK™"]
+
+%%==========================
+%% Layers
+%%==========================
+
+GOV["🟦 AI Governance & Risk Management<br/><br/>
+Policies • AI Governance • Risk • Privacy • Compliance • Ethics • Audit"]
+
+TRUST["🟩 AI Trust Architecture<br/><br/>
+Fairness • Transparency • Explainability • Accountability • Safety"]
+
+APP["🟪 AI Applications<br/><br/>
+Copilots • AI Agents • Autonomous AI • Enterprise AI Apps"]
+
+DESIGN["🟧 Secure AI System Design<br/><br/>
+AI Gateway → Prompt Firewall → RAG → LLM → Agents → Tools → Output Validation"]
+
+DATA["🟦 Data & Knowledge<br/><br/>
+Enterprise Data • Vector DB • Knowledge Graph • APIs • Encryption • DLP"]
+
+MODELS["🟪 Foundation Models<br/><br/>
+OpenAI • Anthropic • Gemini • Llama • Mistral • Private Models"]
+
+INFRA["⬛ Infrastructure<br/><br/>
+Cloud • Kubernetes • GPUs • Containers • Zero Trust"]
+
+OPS["🟥 AI Security Operations (AI-SPM)<br/><br/>
+Model Inventory • Guardrails • SIEM • SOAR • XDR • Monitoring • Telemetry"]
+
+TITLE --> GOV
+GOV --> TRUST
+TRUST --> APP
+APP --> DESIGN
+DESIGN --> DATA
+DATA --> MODELS
+MODELS --> INFRA
+INFRA --> OPS
+
+%%==========================
+%% Cross-Cutting Pillars
+%%==========================
+
+IAM("🔵 Identity & Access Management")
+ZT("🟢 Zero Trust")
+ARCH("🟣 Security Architecture")
+GOVERN("🟠 Governance")
+MON("🔴 Continuous Monitoring")
+DEV("⚫ DevSecOps")
+
+IAM -.-> GOV
+IAM -.-> OPS
+
+ZT -.-> DESIGN
+ZT -.-> INFRA
+
+ARCH -.-> TRUST
+ARCH -.-> DESIGN
+
+GOVERN -.-> GOV
+
+MON -.-> OPS
+
+DEV -.-> DESIGN
+DEV -.-> OPS
+
+%%==========================
+%% Colors
+%%==========================
+
+style TITLE fill:#0B172A,color:#FFFFFF,stroke:#00BCD4,stroke-width:3px
+
+style GOV fill:#1565C0,color:#FFFFFF
+style TRUST fill:#2E7D32,color:#FFFFFF
+style APP fill:#6A1B9A,color:#FFFFFF
+style DESIGN fill:#EF6C00,color:#FFFFFF
+style DATA fill:#0277BD,color:#FFFFFF
+style MODELS fill:#8E24AA,color:#FFFFFF
+style INFRA fill:#455A64,color:#FFFFFF
+style OPS fill:#C62828,color:#FFFFFF
+
+style IAM fill:#1E88E5,color:#FFFFFF
+style ZT fill:#43A047,color:#FFFFFF
+style ARCH fill:#8E24AA,color:#FFFFFF
+style GOVERN fill:#FB8C00,color:#FFFFFF
+style MON fill:#E53935,color:#FFFFFF
+style DEV fill:#37474F,color:#FFFFFF
+```
+## Design Principles
+
+The architecture is built on six core principles:
+
+1. **Secure by Design**
+2. **Trust by Default**
+3. **Zero Trust Everywhere**
+4. **Govern Throughout the AI Lifecycle**
+5. **Monitor Continuously**
+6. **Improve Through Measured Risk**
+
+---
+## Framework Overview
+
+**SARTA™ (Security Architecture, Risk, Trust & Assurance)** is an enterprise AI security framework that integrates governance, trust, cybersecurity, privacy, identity, and operational resilience into a unified architecture for AI systems.
+
+**AI-SABOK™ (AI Security Architecture Body of Knowledge)** defines the core domains, principles, and best practices required to design, build, secure, deploy, monitor, and govern trustworthy AI solutions throughout their lifecycle.
+
+Together, these frameworks provide a structured approach for implementing:
+
+* 🛡️ AI Governance & Risk Management (aligned with the NIST AI RMF)
+* 🤝 AI Trust Architecture
+* 🏗️ Secure AI System Design (RAG, Agents, AI Gateways)
+* 🔍 AI Threat Modeling & Risk Analysis
+* 🔐 AI Identity & Access Management
+* 📊 AI Security Posture Management (AI-SPM)
+* 🚀 Continuous Monitoring & Operational Resilience
+
+---
+
+## Architecture Layers
+
+| Layer                                  | Purpose                                                                              |
+| -------------------------------------- | ------------------------------------------------------------------------------------ |
+| 🟦 **Governance & Risk Management**    | Policies, compliance, ethics, privacy, and enterprise AI governance                  |
+| 🟩 **AI Trust Architecture**           | Fairness, transparency, explainability, accountability, safety, and resilience       |
+| 🟪 **AI Applications**                 | Copilots, AI assistants, autonomous AI, and enterprise AI applications               |
+| 🟧 **Secure AI System Design**         | AI Gateways, Prompt Firewalls, RAG, Agents, MCP, and output validation               |
+| 🟦 **Data & Knowledge**                | Enterprise data, vector databases, knowledge graphs, APIs, encryption, and DLP       |
+| 🟪 **Foundation Models**               | Public and private LLMs, foundation models, and fine-tuned models                    |
+| ⬛ **Infrastructure**                   | Cloud, Kubernetes, GPUs, containers, networking, and Zero Trust                      |
+| 🟥 **AI Security Operations (AI-SPM)** | Guardrails, monitoring, telemetry, SIEM, SOAR, XDR, posture management, and auditing |
+
+---
+
+## Cross-Cutting Security Pillars
+
+These capabilities apply across **every layer** of the architecture:
+
+* 🔵 **Identity & Access Management**
+* 🟢 **Zero Trust**
+* 🟣 **Security Architecture**
+* 🟠 **Governance**
+* 🔴 **Continuous Monitoring**
+* ⚫ **DevSecOps**
+
+---
+
 ### SARTA™
 Sovereign Adaptive Resilience & Trust Architecture
 
+### AI Security Trust Architecture (SARTA™ / AI-SABOK™)
+
 👤 Created by Mr. Mehlek Dawveed
 
-**Original Research and Architecture
-Copyright © 2026 Mehlek Dawveed
-(All Rights Reserved)**
+**Copyright © June 2026 by Mr. Mehlek Dawveed (SARTA™ / AI-SABOK™)
+All Rights Reserved**
 
 ---
 
@@ -49,6 +209,8 @@ Copyright © 2026 Mehlek Dawveed
 * Operational Resilience Engineering
 
 ---
+
+
 
 ## 🚦 Project Status
 
