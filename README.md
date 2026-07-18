@@ -1638,6 +1638,6 @@ Licensed under the **Apache License 2.0**
 
 ---
 
-**Copyright© June 1, 2026 by Creator, Mr. Mehlek Dawveed of the Sovereign Adaptive Resilience & Trust Architecture (SARTA™), AI Security Architect Book of Knowledge (AI-SABOK™), and AI Trust and Operational Readiness Assessment (AITORA™) ALL RIGHTS RESERVED**
+**Copyright© June 1, 2026 by Creator, Mr. Mehlek Dawveed of the Sovereign Adaptive Resilience & Trust Architecture (SARTA™), AI Security Architect Book of Knowledge (AI-SABOK™), and AI Trust and Operational Readiness Assessment (AITORA™) ALL RIGHTS RESERVED.**
 
 
