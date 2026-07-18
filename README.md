@@ -1,6 +1,8 @@
-# 🛡️ Sovereign Adaptive Resilience & Trust Architecture (SARTA)
+# SARTA™🛡️ Sovereign Adaptive Resilience & Trust Architecture
 
-> **A Research Reference Architecture for Autonomous Security, Digital Sovereignty, and Continuous Compliance**
+> **A Reference Security Architecture for Autonomous Security, Digital Sovereignty, and Continuous Compliance that explores how security, trust, compliance, operational resilience, and digital sovereignty can be implemented as continuously adaptive computational systems**.
+
+**SARTA™ reframes cybersecurity from a static control problem into a living autonomous system capable of sensing, reasoning, and responding in real time.**
 
 ![Status](https://img.shields.io/badge/status-active_research-blue)
 ![Version](https://img.shields.io/badge/version-v3_autonomous_mesh-purple)
@@ -9,17 +11,21 @@
 
 ---
 
-## 🌐 Abstract
-
-**SARTA (Sovereign Adaptive Resilience & Trust Architecture)** is a research-grade reference architecture exploring how security, trust, compliance, operational resilience, and digital sovereignty can be implemented as **continuously adaptive computational systems**.
-
-**SARTA** reframes cybersecurity from a static control problem into a **living autonomous system** capable of sensing, reasoning, and responding in real time.
+## AI-SABOK™ AI Security Architect Body of Knowledge
+Mission Statement
+To establish the definitive, vendor-neutral body of knowledge for AI Security Architects by integrating enterprise architecture, cybersecurity, identity, governance, cloud platforms, AI engineering concepts, and operational best practices into a single, practical reference.
 
 ---
 
-## AI Security Trust Architecture (SARTA™ / AI-SABOK™)
+## AITORA™ AI Trust & Operational Readiness Assessment
+The Market Position
+AITORA™ provides enterprises with a comprehensive, framework-aligned assessment to determine whether AI systems are secure, governed, resilient, and operationally ready for trusted deployment.
 
-> **A reference architecture for designing, governing, and securing enterprise AI systems across their entire lifecycle—from governance and trust to secure AI design, foundation models, infrastructure, and continuous security operations.**
+---
+
+**👤 Created by Mr. Mehlek Dawveed, Chief Security Architect**
+
+**Copyright © June 1, 2026 by Mr. Mehlek Dawveed (SARTA™ / AI-SABOK™ / AITORA™) All Rights Reserved**
 
 ---
 ```mermaid
@@ -172,18 +178,6 @@ These capabilities apply across **every layer** of the architecture:
 * 🟠 **Governance**
 * 🔴 **Continuous Monitoring**
 * ⚫ **DevSecOps**
-
----
-
-### SARTA™
-Sovereign Adaptive Resilience & Trust Architecture
-
-### AI Security Trust Architecture (SARTA™ / AI-SABOK™)
-
-👤 Created by Mr. Mehlek Dawveed
-
-**Copyright © June 2026 by Mr. Mehlek Dawveed (SARTA™ / AI-SABOK™)
-All Rights Reserved**
 
 ---
 
