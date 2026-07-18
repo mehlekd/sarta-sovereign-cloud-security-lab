@@ -1,6 +1,6 @@
 # SARTA™🛡️ Sovereign Adaptive Resilience & Trust Architecture
 
-> **A Reference Security Architecture for Autonomous Security, Digital Sovereignty, and Continuous Compliance that explores how security, trust, compliance, operational resilience, and digital sovereignty can be implemented as continuously adaptive computational systems**.
+**A Reference Security Architecture for Autonomous Security, Digital Sovereignty, and Continuous Compliance that explores how security, trust, compliance, operational resilience, and digital sovereignty can be implemented as continuously adaptive computational systems**.
 
 **SARTA™ reframes cybersecurity from a static control problem into a living autonomous system capable of sensing, reasoning, and responding in real time.**
 
@@ -12,14 +12,14 @@
 ---
 
 ## AI-SABOK™ AI Security Architect Body of Knowledge
-Mission Statement
-To establish the definitive, vendor-neutral body of knowledge for AI Security Architects by integrating enterprise architecture, cybersecurity, identity, governance, cloud platforms, AI engineering concepts, and operational best practices into a single, practical reference.
+**Mission Statement:
+To establish the definitive, vendor-neutral body of knowledge for AI Security Architects by integrating enterprise architecture, cybersecurity, identity, governance, cloud platforms, AI engineering concepts, and operational best practices into a single, practical reference.**
 
 ---
 
 ## AITORA™ AI Trust & Operational Readiness Assessment
-The Market Position
-AITORA™ provides enterprises with a comprehensive, framework-aligned assessment to determine whether AI systems are secure, governed, resilient, and operationally ready for trusted deployment.
+**The Market Position:
+AITORA™ provides enterprises with a comprehensive, framework-aligned assessment to determine whether AI systems are secure, governed, resilient, and operationally ready for trusted deployment.**
 
 ---
 
@@ -1638,6 +1638,6 @@ Licensed under the **Apache License 2.0**
 
 ---
 
-## Dawveed, M. (2026) Sovereign Adaptive Resilience & Trust Architecture (SARTA)
+**Copyright© June 1, 2026 by Creator, Mr. Mehlek Dawveed of the Sovereign Adaptive Resilience & Trust Architecture (SARTA™), AI Security Architect Book of Knowledge (AI-SABOK™), and AI Trust and Operational Readiness Assessment (AITORA™) ALL RIGHTS RESERVED**
 
 
